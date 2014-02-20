@@ -9,13 +9,21 @@ $main-grey: #111111;
 $main-red: #d33d45;
 $main-yellow: #e2cd34;
 $main-green: #72b574;
+$main-tan: #f7f5ec;
 
 $fb-blue: #355996;
 $twitter-blue: #00a8de;
 
 /* MIXINS */
 
-
+//BORDER RADIUS MIXIN
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
 
 
 
@@ -28,7 +36,7 @@ $twitter-blue: #00a8de;
 body{
 
     color: $main-black;
-
+    background: $main-tan;
     h1{
         font-family: 'Noto Sans', Arial, sans-serif;
         font-size: 40px;
@@ -41,7 +49,28 @@ body{
         font-size: 20px;
         line-height: 34px;
     }
-}
+
+    /* DEFAULT BUTTON STYLES */
+    div.button{
+        background: $main-teal;
+        color: white;
+        cursor: pointer;
+        display: inline-block;
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-size: 14px;
+        @include border-radius(5px);
+        overflow: hidden;
+        padding:15px 25px;
+        text-decoration: none;
+
+        &:hover{
+            background: $main-teal-hover;
+        }
+        a{
+
+        }// END div.button a
+    }// END div.button
+}// END body
 
 
 /* NAVIGATION STYLES */
@@ -50,6 +79,7 @@ nav{
     background: $main-black;
     overflow: hidden;
 
+    /* PROJECT C NAV LOGO */
     a.logo{
         float: left;
         padding: 9px 30px;
@@ -73,7 +103,7 @@ nav{
 
     ul{
        &.mainNavItems{
-        float: left;
+        width: 100%;
        }
        &.rightNavItems{
         float: right;
@@ -90,6 +120,9 @@ nav{
             }
             &.menu{
                 display: none;
+            }
+            &.right{
+                float: right;
             }
             a{
                 color: white;
