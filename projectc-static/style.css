@@ -27,3 +27,59 @@ blockquote:before, blockquote:after, q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+/* COLORS */
+/* MIXINS */
+/* UNIVERSAL STYLES */
+body {
+  color: #444444; }
+  body h1 {
+    font-family: 'Noto Sans', Arial, sans-serif;
+    font-size: 40px;
+    font-weight: 700; }
+  body p {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 20px;
+    line-height: 34px; }
+
+/* NAVIGATION STYLES */
+nav {
+  font-family: 'Montserrat', 'Noto Sans', Arial, sans-serif;
+  background: #444444;
+  overflow: hidden; }
+  nav a.logo {
+    float: left;
+    padding: 9px 30px; }
+    nav a.logo:hover {
+      background: #5e5e5e; }
+    nav a.logo div {
+      height: 50px;
+      width: 33px;
+      background-image: url(images/fallbackLogo.png);
+      background-repeat: no-repeat;
+      background-image: url(images/logo.svg), none;
+      background-size: 100% auto; }
+  nav ul.mainNavItems {
+    float: left; }
+  nav ul.rightNavItems {
+    float: right; }
+  nav ul li {
+    float: left; }
+    nav ul li:hover {
+      background: #5e5e5e; }
+    nav ul li.mobileOnly {
+      display: none; }
+    nav ul li.menu {
+      display: none; }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 28px 22px;
+      font-size: 13px;
+      display: block; }
+      nav ul li a.donate {
+        background: #529eab;
+        padding-left: 35px;
+        padding-right: 35px; }
+        nav ul li a.donate:hover {
+          background: #63a8b4; }

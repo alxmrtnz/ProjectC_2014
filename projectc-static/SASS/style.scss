@@ -1,2 +1,134 @@
 /** * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {    margin: 0;  padding: 0; border: 0;  font-size: 100%;    font: inherit;  vertical-align: baseline;}/* HTML5 display-role reset for older browsers */article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {    display: block;}body {  line-height: 1;}ol, ul {    list-style: none;}blockquote, q {   quotes: none;}blockquote:before, blockquote:after,q:before, q:after {   content: '';    content: none;}table {  border-collapse: collapse;  border-spacing: 0;}
 
+/* COLORS */
+$main-teal: #529eab;
+$main-teal-hover: lighten($main-teal, 5%);
+
+$main-black: #444444;
+$main-grey: #111111;
+$main-red: #d33d45;
+$main-yellow: #e2cd34;
+$main-green: #72b574;
+
+$fb-blue: #355996;
+$twitter-blue: #00a8de;
+
+/* MIXINS */
+
+
+
+
+
+
+
+
+
+/* UNIVERSAL STYLES */
+
+body{
+
+    color: $main-black;
+
+    h1{
+        font-family: 'Noto Sans', Arial, sans-serif;
+        font-size: 40px;
+        font-weight: 700;
+
+    }
+
+    p{
+        font-family: 'Merriweather', Georgia, serif;
+        font-size: 20px;
+        line-height: 34px;
+    }
+}
+
+
+/* NAVIGATION STYLES */
+nav{
+    font-family: 'Montserrat', 'Noto Sans', Arial, sans-serif;
+    background: $main-black;
+    overflow: hidden;
+
+    a.logo{
+        float: left;
+        padding: 9px 30px;
+        &:hover{
+            background: lighten($main-black, 10%);
+        }
+        div{
+            height: 50px;
+            width: 33px;
+
+            background-image: url(images/fallbackLogo.png);
+            background-repeat: no-repeat;
+            background-image: url(images/logo.svg), none;
+
+
+            background-size: 100% auto;
+
+        }
+    }// END a.logo
+
+
+    ul{
+       &.mainNavItems{
+        float: left;
+       }
+       &.rightNavItems{
+        float: right;
+       }
+
+        li{
+            float: left;
+            &:hover{
+                background: lighten($main-black, 10%);
+            }
+            &.mobileOnly{
+                display: none;
+            }
+            &.menu{
+                display: none;
+            }
+            a{
+                color: white;
+                text-decoration: none;
+                padding: 28px 22px;
+                font-size: 13px;
+                display: block;
+                &.donate{
+                    background: $main-teal;
+                    padding-left: 35px;
+                    padding-right: 35px;
+                    &:hover{
+                        background: $main-teal-hover;
+                    }
+                }
+            }//END a
+        }//END li
+    }//END ul
+
+}//END nav
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
