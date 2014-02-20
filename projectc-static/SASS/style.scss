@@ -53,9 +53,9 @@ nav{
     a.logo{
         float: left;
         padding: 9px 30px;
-        &:hover{
+        /*&:hover{
             background: lighten($main-black, 10%);
-        }
+        }*/
         div{
             height: 50px;
             width: 33px;
@@ -81,9 +81,10 @@ nav{
 
         li{
             float: left;
-            &:hover{
+            /*&:hover{
                 background: lighten($main-black, 10%);
-            }
+            }*/
+            transition: opacity 0.3s ease;
             &.mobileOnly{
                 display: none;
             }

@@ -49,9 +49,10 @@ nav {
   overflow: hidden; }
   nav a.logo {
     float: left;
-    padding: 9px 30px; }
-    nav a.logo:hover {
-      background: #5e5e5e; }
+    padding: 9px 30px;
+    /*&:hover{
+        background: lighten($main-black, 10%);
+    }*/ }
     nav a.logo div {
       height: 50px;
       width: 33px;
@@ -64,9 +65,11 @@ nav {
   nav ul.rightNavItems {
     float: right; }
   nav ul li {
-    float: left; }
-    nav ul li:hover {
-      background: #5e5e5e; }
+    float: left;
+    /*&:hover{
+        background: lighten($main-black, 10%);
+    }*/
+    transition: opacity 0.3s ease; }
     nav ul li.mobileOnly {
       display: none; }
     nav ul li.menu {
