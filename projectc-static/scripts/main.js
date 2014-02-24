@@ -12,9 +12,22 @@ $(function(){ //shorthand document ready
             $(this).siblings().css('opacity', $easingOut);
         });
         // END FUNCTION FOR DIMMING SIBLING MENU LIs
+		
+		
+		
+		
+		//Begin function for changing blogPreview h1 to blogItems h2
+		var blogItemsTitles = $('.blogItemsTitle');
+				
+		 blogItemsTitles.mouseover(function() {
+         	$(this).siblings().css('opacity', $easingIn);
+        });
+		blogItemsTitles.mouseleave(function() {
+			$(this).siblings().css('opacity', $easingOut);
+		});
 
-
-
-
+		blogItemsTitles.on('click', function() {
+			document.getElementById('blogPreviewTitle').innerHTML = 'Can this be anything other than a string?';
+		});
 
 });
