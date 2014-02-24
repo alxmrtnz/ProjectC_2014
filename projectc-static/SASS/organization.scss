@@ -44,8 +44,9 @@ div.mast{
             h1{
                 margin-bottom: 5px;
             }
-            p{
+            p.subtitle{
                 font-size: 18px;
+                margin-bottom: 0px;
             }
         }
 
@@ -68,22 +69,84 @@ div.mast{
     max-width: 1010px;
     margin: 30px auto;
     position: relative;
+
+    div.content{
+        position: relative;
+        margin-left: -70px;
+    }
+
     div.leftColumn{
         width: 170px;
-        background: #ddd;
+
         height:400px;
         position: absolute;
         top: 0px;
-        left: -70px;
-    }
+
+        font-family: 'Noto Sans', Arial, sans-serif;
+
+        div.button{
+            width: 50px;
+            text-align: center;
+            margin-left: 33px;
+        }
+
+        div.voting{
+            .currentVotes{
+                font-size: 13px;
+                text-align: center;
+                margin-bottom: 5px;
+            }
+            .tally{
+                text-align: center;
+                font-size: 36px;
+                margin-bottom: 5px;
+            }
+
+        }//END div.voting
+
+        div.sharing{
+            border-bottom: 1px solid #ececec;
+            border-top: 1px solid #ececec;
+            margin: 30px 0px;
+            padding: 10px 0px;
+
+            .fb{
+                margin-bottom: 10px;
+            }
+
+        }// END div.sharing
+
+        div.subNav{
+
+
+            ul{
+                padding-right: 37px;
+                li{
+                    font-size: 13px;
+                    text-align: right;
+                    margin-bottom: 20px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }// END div.leftColumn
 
     div.mainContent{
         background: #fff;
         border: 1px solid #ececec;
         max-width: 700px;
-        padding: 10px 110px 20px 40px;
-        margin-left: 100px;
-    }
+        padding: 30px 110px 20px 40px;
+        margin-left: 169px;
+
+        div.breadCrumbs{
+            font-family: 'Noto Sans', Arial, sans-serif;
+            font-size: 14px;
+            color: #cbcbcb;
+            border-bottom: 1px solid #ececec;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }// END .breadCrumbs
+    }// END div.mainContent
 } // END .orgContentWrapper
 
 /////////////////////* END ORG PAGE STYLES */////////////////////////

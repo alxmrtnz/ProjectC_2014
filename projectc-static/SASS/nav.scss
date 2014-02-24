@@ -60,7 +60,7 @@ nav{
                     padding-left: 35px;
                     padding-right: 35px;
                     &:hover{
-                        background: $main-teal-hover;
+                        @include hover-bg($main-teal);
                     }
                 }
             }//END a
