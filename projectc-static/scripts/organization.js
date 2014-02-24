@@ -1,11 +1,10 @@
 $(function(){ //shorthand document ready
 
-
     //at 500px scrolling, change leftColumn to fixed
     var $leftColumn = $('div.leftColumn');
-    $(document).scroll(function() {
 
-        if($('body').scrollTop() >= 500){
+    var fromTop = function () {
+        if($('html').scrollTop() >= 500){
             $leftColumn.css({
                 position: 'fixed',
                 top: '30px'
@@ -16,6 +15,15 @@ $(function(){ //shorthand document ready
                 top: '0px'
             });
         }
+    };
+
+
+
+    fromTop(); //initial setting for leftColumn (used if page loads more than 500px from top already)
+
+    $(document).scroll(function() {
+        //constantly checks for distance from top in order to set leftColumn
+        fromTop();
     });
 
 });

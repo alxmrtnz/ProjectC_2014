@@ -72,6 +72,7 @@ div.mast{
     position: relative;
 
     div.content{
+        /*this was added to shift all main content to the left 70px. This offsets the content instead of having it perfectly centered. We may not want this. NOTE: if you do remove, make sure to remove the div.content tag in the individual organization HTML file*/
         position: relative;
         margin-left: -70px;
     }
