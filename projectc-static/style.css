@@ -30,11 +30,14 @@ table {
 
 /* COLORS */
 /* MIXINS */
-/* UNIVERSAL STYLES */
+/*==================== BEGIN UNIVERSAL STYLES =====================*/
 body {
   color: #444444;
   background: #f7f5ec;
   /* DEFAULT BUTTON STYLES */ }
+  body div.contentWrapper {
+    max-width: 1000px;
+    margin: 0 auto; }
   body h1 {
     font-family: 'Noto Sans', Arial, sans-serif;
     font-size: 40px;
@@ -61,7 +64,7 @@ body {
     body div.button:hover {
       background: #63a8b4; }
 
-/* NAVIGATION STYLES */
+/*==================== BEGIN NAVIGATION STYLES =====================*/
 nav {
   font-family: 'Montserrat', 'Noto Sans', Arial, sans-serif;
   background: #444444;
@@ -108,3 +111,16 @@ nav {
         padding-right: 35px; }
         nav ul li a.donate:hover {
           background: #63a8b4; }
+
+/*==================== BEGIN FOOTER STYLES =====================*/
+html, body {
+  height: 100%; }
+
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -100px; }
+
+footer, .push {
+  height: 100px; }
