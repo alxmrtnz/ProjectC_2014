@@ -336,3 +336,9 @@ html, body {
 
 footer, .push {
   height: 100px; }
+
+footer {
+  background-color: #111111;
+  margin-top: 50px; }
+  footer p {
+    color: #fff; }

@@ -200,6 +200,16 @@ html, body{
 footer, .push{
     height: 100px;
 }
+
+footer {
+	background-color: $main-grey;
+	margin-top: 50px;
+	
+	p {
+		color: #fff;
+	}
+
+}
 /////////////////////* END FOOTER STYLES */////////////////////////
 
 

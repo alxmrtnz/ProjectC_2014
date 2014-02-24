@@ -16,7 +16,7 @@ $(function(){ //shorthand document ready
 		
 		
 		
-		//Begin function for changing blogPreview h1 to blogItems h2
+		//Begin function for changing blogPreviewTitle h1 to blogItemsTitle h2
 		var blogItemsTitles = $('.blogItemsTitle');
 				
 		 blogItemsTitles.mouseover(function() {
