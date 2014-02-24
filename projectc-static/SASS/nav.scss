@@ -1,0 +1,72 @@
+/*==================== BEGIN NAVIGATION STYLES =====================*/
+nav{
+    font-family: 'Montserrat', 'Noto Sans', Arial, sans-serif;
+    background: $main-black;
+    overflow: hidden;
+
+    /* PROJECT C NAV LOGO */
+    a.logo{
+        float: left;
+        padding: 9px 30px;
+        /*&:hover{
+            background: lighten($main-black, 10%);
+        }*/
+        div{
+            height: 50px;
+            width: 33px;
+
+            background-image: url(images/fallbackLogo.png);
+            background-repeat: no-repeat;
+            background-image: url(images/logo.svg), none;
+
+
+            background-size: 100% auto;
+
+        }
+    }// END a.logo
+
+
+    ul{
+       &.mainNavItems{
+        width: 100%;
+       }
+       &.rightNavItems{
+        float: right;
+       }
+
+        li{
+            float: left;
+            /*&:hover{
+                background: lighten($main-black, 10%);
+            }*/
+            transition: opacity 0.3s ease;
+            &.mobileOnly{
+                display: none;
+            }
+            &.menu{
+                display: none;
+            }
+            &.right{
+                float: right;
+            }
+            a{
+                color: white;
+                text-decoration: none;
+                padding: 28px 22px;
+                font-size: 13px;
+                display: block;
+                &.donate{
+                    background: $main-teal;
+                    padding-left: 35px;
+                    padding-right: 35px;
+                    &:hover{
+                        background: $main-teal-hover;
+                    }
+                }
+            }//END a
+        }//END li
+    }//END ul
+
+}//END nav
+
+/////////////////////* END NAVIGATION STYLES */////////////////////////
