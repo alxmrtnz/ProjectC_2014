@@ -57,8 +57,19 @@ body{
         font-family: 'Noto Sans', Arial, sans-serif;
         font-size: 40px;
         font-weight: 700;
-
     }
+
+	h2{
+		font-family: 'Noto Sans', Arial, sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+	}
+	
+	h3 {
+		font-family: 'Noto Sans', Arial, sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+	}
 
     p{
         font-family: 'Merriweather', Georgia, serif;
@@ -105,6 +116,74 @@ body{
 
 
 
+
+/* Index Styles */
+
+#intro {
+	text-align: center;
+	margin: 40px 10px auto 10px;
+}
+
+
+#introPic {
+	max-width: 100%;
+}
+
+#orgs2014 {
+
+	margin: 60px 10px auto 10px;
+
+	h2 {
+	text-align: center;
+	}
+	
+}
+	
+.orgPreview {
+	text-align: left;
+	margin: 50px 10%;
+	clear: both;
+	
+	img {
+		float: left;
+		padding: 0 30px 30px 0;
+	}
+}
+
+
+
+#indexBlog {
+	margin: 150px auto auto 10%;
+	text-align: left;
+
+	#blogPreview {
+	width: 55%;
+	padding: 0 70px 30px 0;
+	float: left;
+	}
+		
+	h1 {
+	margin-bottom: 10px;
+	}
+	
+	h2 {
+	margin-bottom: 10px;
+	}
+	
+	.blogItems {
+	padding-bottom: 40px;
+	}
+
+}
+
+
+
+
+
+
+
+
+
 /*==================== BEGIN FOOTER STYLES =====================*/
 
 html, body{
@@ -120,6 +199,16 @@ html, body{
 
 footer, .push{
     height: 100px;
+}
+
+footer {
+	background-color: $main-grey;
+	margin-top: 50px;
+	
+	p {
+		color: #fff;
+	}
+
 }
 /////////////////////* END FOOTER STYLES */////////////////////////
 
