@@ -4,7 +4,7 @@ $(function(){ //shorthand document ready
     var $leftColumn = $('div.leftColumn');
 
     var fromTop = function () {
-        if($('html').scrollTop() >= 500){
+        if($('body').scrollTop() >= 500){
             $leftColumn.css({
                 position: 'fixed',
                 top: '30px'
@@ -23,6 +23,7 @@ $(function(){ //shorthand document ready
 
     $(document).scroll(function() {
         //constantly checks for distance from top in order to set leftColumn
+        console.log($('body').scrollTop());
         fromTop();
     });
 

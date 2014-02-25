@@ -2,19 +2,19 @@
 /* MIXINS */
 /* IMPORTS */
 /*==================== BEGIN ORG PAGE STYLES =====================*/
-div.mast {
+.mast {
   height: 430px;
   overflow: hidden;
   position: relative;
   width: 100%; }
-  div.mast .bg {
+  .mast .bg {
     position: absolute;
     top: 0;
     left: -50%;
     width: 200%;
     height: 200%;
     z-index: 1; }
-  div.mast .bg img {
+  .mast .bg img {
     position: absolute;
     top: 0;
     left: 0;
@@ -24,7 +24,7 @@ div.mast {
     margin-top: 0px;
     min-width: 50%;
     min-height: 50%; }
-  div.mast div.copy {
+  .mast div.copy {
     position: absolute;
     z-index: 2;
     bottom: 0px;
@@ -45,16 +45,16 @@ div.mast {
     /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a1000000',GradientType=0 );
     /* IE6-8 */ }
-    div.mast div.copy div.copyWrapper {
+    .mast div.copy div.copyWrapper {
       color: #fff;
       margin: 0 auto;
       padding-bottom: 20px;
       padding-left: 70px;
       text-shadow: 0px 2px 7px #000;
       width: 840px; }
-      div.mast div.copy div.copyWrapper h1 {
+      .mast div.copy div.copyWrapper h1 {
         margin-bottom: 5px; }
-      div.mast div.copy div.copyWrapper p.subtitle {
+      .mast div.copy div.copyWrapper p.subtitle {
         font-size: 18px;
         margin-bottom: 0px; }
 
@@ -65,8 +65,7 @@ div.mast {
   /* END div.mainContent*/ }
   .orgContentWrapper div.content {
     /*this was added to shift all main content to the left 70px. This offsets the content instead of having it perfectly centered. We may not want this. NOTE: if you do remove, make sure to remove the div.content tag in the individual organization HTML file*/
-    position: relative;
-    margin-left: -70px; }
+    position: relative; }
   .orgContentWrapper div.leftColumn {
     width: 170px;
     height: 400px;
@@ -99,14 +98,14 @@ div.mast {
         text-align: right;
         margin-bottom: 20px;
         cursor: pointer; }
-  .orgContentWrapper div.mainContent {
+  .orgContentWrapper .mainContent {
     background: #fff;
     border: 1px solid #ececec;
     max-width: 700px;
     padding: 30px 110px 20px 40px;
     margin-left: 169px;
     /* END .story - this is to hide most of the written word*/ }
-    .orgContentWrapper div.mainContent div.breadCrumbs {
+    .orgContentWrapper .mainContent div.breadCrumbs {
       font-family: 'Noto Sans', Arial, sans-serif;
       font-size: 14px;
       color: #cbcbcb;

@@ -1,6 +1,6 @@
 /*==================== BEGIN ORG PAGE STYLES =====================*/
 
-div.mast{
+.mast{
     height: 430px;
     overflow: hidden;
     position: relative;
@@ -74,7 +74,7 @@ div.mast{
     div.content{
         /*this was added to shift all main content to the left 70px. This offsets the content instead of having it perfectly centered. We may not want this. NOTE: if you do remove, make sure to remove the div.content tag in the individual organization HTML file*/
         position: relative;
-        margin-left: -70px;
+        //margin-left: -70px;
     }
 
     div.leftColumn{
@@ -136,7 +136,7 @@ div.mast{
 
 
 
-    div.mainContent{
+    .mainContent{
         background: #fff;
         border: 1px solid #ececec;
         max-width: 700px;
