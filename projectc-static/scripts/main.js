@@ -16,5 +16,18 @@ $(function(){ //shorthand document ready
 
 
 
+		//Begin function for changing blogPreviewTitle h1 to blogItemsTitle h2
+		var blogItemsTitles = $('.blogItemsTitle');
+
+		 blogItemsTitles.mouseover(function() {
+         	$(this).siblings().css('opacity', $easingIn);
+        });
+		blogItemsTitles.mouseleave(function() {
+			$(this).siblings().css('opacity', $easingOut);
+		});
+
+		blogItemsTitles.on('click', function() {
+			$('#blogPreviewTitle').html('Can this be anything other than a string?') ;
+		});
 
 });

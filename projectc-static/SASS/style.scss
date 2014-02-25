@@ -34,6 +34,8 @@ $twitter-blue: #00a8de;
 @import 'reset';
 @import 'nav';
 
+@import 'homepage';
+
 
 
 
@@ -57,8 +59,19 @@ body{
         font-family: 'Noto Sans', Arial, sans-serif;
         font-size: 40px;
         font-weight: 700;
-
     }
+
+	h2{
+		font-family: 'Noto Sans', Arial, sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+	}
+
+	h3 {
+		font-family: 'Noto Sans', Arial, sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+	}
 
     p{
         font-family: 'Merriweather', Georgia, serif;
@@ -105,6 +118,13 @@ body{
 
 
 
+
+
+
+
+
+
+
 /*==================== BEGIN FOOTER STYLES =====================*/
 
 html, body{
@@ -120,6 +140,16 @@ html, body{
 
 footer, .push{
     height: 100px;
+}
+
+footer {
+	background-color: $main-grey;
+	margin-top: 50px;
+
+	p {
+		color: #fff;
+	}
+
 }
 /////////////////////* END FOOTER STYLES */////////////////////////
 
