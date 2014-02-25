@@ -24,6 +24,13 @@
     margin-top: 0px;
     min-width: 50%;
     min-height: 50%; }
+  .mast .playBtn {
+    width: 100px;
+    height: 100px;
+    background-image: url(images/playIconFallback.png);
+    background-repeat: no-repeat;
+    background-image: url(images/playIcon.svg), none;
+    background-size: 100% auto; }
   .mast div.copy {
     position: absolute;
     z-index: 2;

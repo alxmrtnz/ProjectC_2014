@@ -27,7 +27,14 @@
 
     }
 
-
+    .playBtn{
+        width:100px;
+        height:100px;
+        background-image: url(images/playIconFallback.png);
+        background-repeat: no-repeat;
+        background-image: url(images/playIcon.svg), none;
+        background-size: 100% auto;
+    }
 
     div.copy{
         position: absolute;
