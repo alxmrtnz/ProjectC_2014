@@ -12,13 +12,13 @@ $(function(){ //shorthand document ready
             $(this).siblings().css('opacity', $easingOut);
         });
         // END FUNCTION FOR DIMMING SIBLING MENU LIs
-		
-		
-		
-		
+
+
+
+
 		//Begin function for changing blogPreviewTitle h1 to blogItemsTitle h2
 		var blogItemsTitles = $('.blogItemsTitle');
-				
+
 		 blogItemsTitles.mouseover(function() {
          	$(this).siblings().css('opacity', $easingIn);
         });
@@ -27,7 +27,7 @@ $(function(){ //shorthand document ready
 		});
 
 		blogItemsTitles.on('click', function() {
-			document.getElementById('blogPreviewTitle').innerHTML = 'Can this be anything other than a string?';
+			$('#blogPreviewTitle').html('Can this be anything other than a string?') ;
 		});
 
 });
