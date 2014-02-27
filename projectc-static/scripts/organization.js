@@ -1,4 +1,4 @@
-$(function(){ //shorthand document ready
+$( document ).ready(function() {
 
     //at 500px scrolling, change leftColumn to fixed
     var $leftColumn = $('div.leftColumn');
@@ -17,6 +17,13 @@ $(function(){ //shorthand document ready
         }
     };
 
+    var playVideo = function(){
+        var iframe = $(".vimeo-iframe")[0];
+        console.log("iframe: " + iframe);
+        var player = $f(iframe);
+
+        player.api("play");
+    };
 
 
     fromTop(); //initial setting for leftColumn (used if page loads more than 500px from top already)
@@ -26,5 +33,21 @@ $(function(){ //shorthand document ready
         console.log($('body').scrollTop());
         fromTop();
     });
+
+
+    $(".playBtn").click(function() {
+        $('.default').fadeOut('400', function() {
+            setTimeout(function() {
+                  playVideo();
+            }, 5000);
+        });
+
+
+    });
+
+
+
+
+
 
 });

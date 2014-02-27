@@ -6,7 +6,13 @@
   height: 430px;
   overflow: hidden;
   position: relative;
-  width: 100%; }
+  width: 100%;
+  background: #444; }
+  .mast .videoMast {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    background: #222; }
   .mast .bg {
     position: absolute;
     top: 0;
@@ -27,10 +33,20 @@
   .mast .playBtn {
     width: 100px;
     height: 100px;
+    position: relative;
+    margin: 150px auto 0px auto;
+    z-index: 3;
     background-image: url(images/playIconFallback.png);
     background-repeat: no-repeat;
     background-image: url(images/playIcon.svg), none;
-    background-size: 100% auto; }
+    background-size: 100% auto;
+    cursor: pointer; }
+    .mast .playBtn:hover {
+      filter: alpha(opacity=80);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+      -moz-opacity: 0.8;
+      -khtml-opacity: 0.8;
+      opacity: 0.8; }
   .mast div.copy {
     position: absolute;
     z-index: 2;
