@@ -65,7 +65,7 @@
         background-size: 100% auto;
         cursor: pointer;
         &:hover{
-            @include opacity(.8);
+            @include opacity(.5);
         }
     }
 

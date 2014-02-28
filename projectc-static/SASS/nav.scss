@@ -35,12 +35,8 @@ nav{
     ul{
         li{
             float: left;
-            /*&:hover{
-                background: lighten($main-black, 10%);
-            }*/
             transition: opacity 0.3s ease;
-
-            &.menu{
+            &.menuLink{
                 display: none;
                 @media screen and (max-width: $break-2){
                     display: block;
@@ -48,7 +44,6 @@ nav{
             }
             &.right{
                 float: right;
-
             }
             a{
                 color: white;
