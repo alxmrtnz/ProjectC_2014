@@ -1,4 +1,5 @@
 /* COLORS */
+/* VARIABLES */
 /* MIXINS */
 /* IMPORTS */
 /*==================== BEGIN ORG PAGE STYLES =====================*/
@@ -182,8 +183,7 @@ table {
 nav {
   font-family: 'Montserrat', 'Noto Sans', Arial, sans-serif;
   background: #444444;
-  overflow: hidden;
-  /* PROJECT C NAV LOGO */ }
+  overflow: hidden; }
   nav a.logo {
     float: left;
     padding: 9px 30px;
@@ -197,20 +197,20 @@ nav {
       background-repeat: no-repeat;
       background-image: url(images/logo.svg), none;
       background-size: 100% auto; }
-  nav ul.mainNavItems {
-    width: 100%; }
-  nav ul.rightNavItems {
-    float: right; }
+    @media screen and (max-width: 800px) {
+      nav a.logo {
+        padding: 5px 20px; } }
   nav ul li {
     float: left;
     /*&:hover{
         background: lighten($main-black, 10%);
     }*/
     transition: opacity 0.3s ease; }
-    nav ul li.mobileOnly {
-      display: none; }
     nav ul li.menu {
       display: none; }
+      @media screen and (max-width: 700px) {
+        nav ul li.menu {
+          display: block; } }
     nav ul li.right {
       float: right; }
     nav ul li a {
@@ -225,6 +225,31 @@ nav {
         padding-right: 35px; }
         nav ul li a.donate:hover {
           background: #63a8b4; }
+      @media screen and (max-width: 800px) {
+        nav ul li a {
+          padding: 24px 16px; } }
+  nav ul.mainNavItems {
+    width: 100%; }
+    nav ul.mainNavItems:hover li.pageLink {
+      filter: alpha(opacity=50);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+      -moz-opacity: 0.5;
+      -khtml-opacity: 0.5;
+      opacity: 0.5; }
+    nav ul.mainNavItems:hover li.pageLink:hover {
+      filter: alpha(opacity=100);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+      -moz-opacity: 1;
+      -khtml-opacity: 1;
+      opacity: 1; }
+    @media screen and (max-width: 700px) {
+      nav ul.mainNavItems li.pageLink {
+        display: none; } }
+  nav ul.rightNavItems {
+    float: right; }
+    @media screen and (max-width: 700px) {
+      nav ul.rightNavItems li.signIn {
+        display: none; } }
 
 /* Index Styles */
 #intro {
