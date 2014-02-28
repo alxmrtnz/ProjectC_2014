@@ -13,45 +13,59 @@
         <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
         <!-- END WEB FONTS -->
+
+
     </head>
     <body>
         <div class="wrapper">
             <nav>
 
                 <ul class="mainNavItems">
-                    <li class="pageLink"><a class="logo" href="index.html"><div></div></a></li>
+                    <li class=""><a class="logo" href="index.html"><div></div></a></li>
                     <li class="pageLink"><a href="featuredorg.html">2014 Nonprofits</a></li>
                     <li class="pageLink"><a href="">Archive</a></li>
                     <li class="pageLink"><a href="">About</a></li>
                     <li class="pageLink"><a href="">Donors</a></li>
                     <li class="pageLink"><a href="">Blog</a></li>
 
-                    <li class="mobileOnly"><a href="">Sign In</a></li>
-
-                    <li class="right"><a href="" class="donate">Donate</a></li>
-                    <li class="signIn right"><a href="">Sign In</a></li>
-                    <li class="menu right"><a href="">Menu</a></li>
 
                 </ul>
 
                 <ul class="rightNavItems">
-
+                    <li class="right"><a href="" class="donate">Donate</a></li>
+                    <li class="signIn right"><a href="">Sign In</a></li>
+                    <li class="menuLink right"><a href="">Menu</a></li>
                 </ul>
             </nav>
 
             <section class="mast">
-                <div class="bg">
-                  <img src="images/gatheringplace.jpg" alt="">
+                <div class="videoMast">
+                    <div class="iframeContainer">
+
+                        <iframe class="vimeo-iframe" data-setup="{}" src="http://player.vimeo.com/video/63524823?api=1$amp;title=0&amp;byline=0&amp;portrait=0" width="1000" height="563" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                    </div>
+                    <div class="close">Close Video</div>
                 </div>
 
-                <div class="copy">
-                    <div class="copyWrapper">
-                        <h1>The Gathering Place</h1>
-                        <p class="subtitle">Supporting people with mental illness through personal development</p>
-                    </div><!-- end .copyWrapper -->
+                <div class="default">
+                    <div class="playBtn">
 
-                </div><!-- end .copy -->
+                    </div>
+                    <div class="copy">
+                        <div class="copyWrapper">
+                            <h1>The Gathering Place</h1>
+                            <p class="subtitle">Supporting people with mental illness through personal development</p>
+                        </div><!-- end .copyWrapper -->
+
+                    </div><!-- end .copy -->
+                    <div class="bg">
+                      <img src="images/gatheringplace.jpg" alt="">
+                    </div>
+                </div>
+
             </section><!-- end .orgMast -->
+
+
 
             <div class="orgContentWrapper">
                 <div class="content">
@@ -102,10 +116,11 @@
             footer
         </footer>
 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/organization.js"></script>
+    <script src="scripts/jquery.fitvids.js"></script>
 
-
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script src="scripts/main.js"></script>
-        <script src="scripts/organization.js"></script>
     </body>
 </html>

@@ -13,7 +13,14 @@ $main-tan: #fafafa;
 $fb-blue: #355996;
 $twitter-blue: #00a8de;
 
+
+/* VARIABLES */
+$break-1: 800px;
+$break-2: 700px;
 /* MIXINS */
+
+
+
 
 //BORDER RADIUS MIXIN
 @mixin border-radius($radius) {
@@ -26,6 +33,15 @@ $twitter-blue: #00a8de;
 
 @mixin hover-bg($color){
     background: lighten($color, 5%)
+}
+
+// OPACITY MIXIN
+@mixin opacity($trans) {
+  filter: alpha(opacity=($trans * 100));
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$trans * 100})";
+  -moz-opacity: $trans;
+  -khtml-opacity: $trans;
+  opacity: $trans;
 }
 
 /* IMPORTS */

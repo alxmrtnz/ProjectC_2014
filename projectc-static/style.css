@@ -1,12 +1,31 @@
 /* COLORS */
+/* VARIABLES */
 /* MIXINS */
 /* IMPORTS */
 /*==================== BEGIN ORG PAGE STYLES =====================*/
+.sidedock {
+  top: 30px !important; }
+
 .mast {
   height: 430px;
   overflow: hidden;
   position: relative;
-  width: 100%; }
+  width: 100%;
+  background: #444; }
+  .mast .videoMast {
+    z-index: 5;
+    width: 100%;
+    background: #222;
+    display: none; }
+    .mast .videoMast .iframeContainer {
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative; }
+    .mast .videoMast .close {
+      position: absolute;
+      bottom: -23px;
+      cursor: pointer;
+      right: 10px; }
   .mast .bg {
     position: absolute;
     top: 0;
@@ -24,6 +43,23 @@
     margin-top: 0px;
     min-width: 50%;
     min-height: 50%; }
+  .mast .playBtn {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin: 150px auto 0px auto;
+    z-index: 3;
+    background-image: url(images/playIconFallback.png);
+    background-repeat: no-repeat;
+    background-image: url(images/playIcon.svg), none;
+    background-size: 100% auto;
+    cursor: pointer; }
+    .mast .playBtn:hover {
+      filter: alpha(opacity=50);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+      -moz-opacity: 0.5;
+      -khtml-opacity: 0.5;
+      opacity: 0.5; }
   .mast div.copy {
     position: absolute;
     z-index: 2;
@@ -59,7 +95,7 @@
         margin-bottom: 0px; }
 
 .orgContentWrapper {
-  max-width: 1010px;
+  max-width: 1000px;
   margin: 30px auto;
   position: relative;
   /* END div.mainContent*/ }
@@ -147,8 +183,7 @@ table {
 nav {
   font-family: 'Montserrat', 'Noto Sans', Arial, sans-serif;
   background: #444444;
-  overflow: hidden;
-  /* PROJECT C NAV LOGO */ }
+  overflow: hidden; }
   nav a.logo {
     float: left;
     padding: 9px 30px;
@@ -162,20 +197,17 @@ nav {
       background-repeat: no-repeat;
       background-image: url(images/logo.svg), none;
       background-size: 100% auto; }
-  nav ul.mainNavItems {
-    width: 100%; }
-  nav ul.rightNavItems {
-    float: right; }
+    @media screen and (max-width: 800px) {
+      nav a.logo {
+        padding: 5px 20px; } }
   nav ul li {
     float: left;
-    /*&:hover{
-        background: lighten($main-black, 10%);
-    }*/
     transition: opacity 0.3s ease; }
-    nav ul li.mobileOnly {
+    nav ul li.menuLink {
       display: none; }
-    nav ul li.menu {
-      display: none; }
+      @media screen and (max-width: 700px) {
+        nav ul li.menuLink {
+          display: block; } }
     nav ul li.right {
       float: right; }
     nav ul li a {
@@ -190,6 +222,31 @@ nav {
         padding-right: 35px; }
         nav ul li a.donate:hover {
           background: #63a8b4; }
+      @media screen and (max-width: 800px) {
+        nav ul li a {
+          padding: 24px 16px; } }
+  nav ul.mainNavItems {
+    width: 100%; }
+    nav ul.mainNavItems:hover li.pageLink {
+      filter: alpha(opacity=50);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+      -moz-opacity: 0.5;
+      -khtml-opacity: 0.5;
+      opacity: 0.5; }
+    nav ul.mainNavItems:hover li.pageLink:hover {
+      filter: alpha(opacity=100);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+      -moz-opacity: 1;
+      -khtml-opacity: 1;
+      opacity: 1; }
+    @media screen and (max-width: 700px) {
+      nav ul.mainNavItems li.pageLink {
+        display: none; } }
+  nav ul.rightNavItems {
+    float: right; }
+    @media screen and (max-width: 700px) {
+      nav ul.rightNavItems li.signIn {
+        display: none; } }
 
 /* Index Styles */
 #intro {
