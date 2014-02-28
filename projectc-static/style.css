@@ -2,6 +2,9 @@
 /* MIXINS */
 /* IMPORTS */
 /*==================== BEGIN ORG PAGE STYLES =====================*/
+.sidedock {
+  top: 30px !important; }
+
 .mast {
   height: 430px;
   overflow: hidden;
@@ -9,10 +12,19 @@
   width: 100%;
   background: #444; }
   .mast .videoMast {
-    position: absolute;
     z-index: 5;
     width: 100%;
-    background: #222; }
+    background: #222;
+    display: none; }
+    .mast .videoMast .iframeContainer {
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative; }
+    .mast .videoMast .close {
+      position: absolute;
+      bottom: -23px;
+      cursor: pointer;
+      right: 10px; }
   .mast .bg {
     position: absolute;
     top: 0;
@@ -82,7 +94,7 @@
         margin-bottom: 0px; }
 
 .orgContentWrapper {
-  max-width: 1010px;
+  max-width: 1000px;
   margin: 30px auto;
   position: relative;
   /* END div.mainContent*/ }

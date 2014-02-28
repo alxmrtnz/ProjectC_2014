@@ -1,5 +1,9 @@
 /*==================== BEGIN ORG PAGE STYLES =====================*/
 
+.sidedock{
+    top: 30px !important;
+}
+
 .mast{
     height: 430px;
     overflow: hidden;
@@ -8,10 +12,25 @@
     background: #444;
 
     .videoMast{
-        position: absolute;
+
         z-index: 5;
         width: 100%;
         background: #222;
+        display: none;
+        .iframeContainer{
+            max-width: 1000px;
+            margin:0 auto;
+            position: relative;
+
+
+
+        }//end .iframeContainer
+        .close{
+            position: absolute;
+            bottom: -23px;
+            cursor: pointer;
+            right: 10px;
+        }
     }//end .videoMast
     .bg {
       position: absolute;
@@ -91,7 +110,7 @@
 
 
 .orgContentWrapper{
-    max-width: 1010px;
+    max-width: 1000px;
     margin: 30px auto;
     position: relative;
 
