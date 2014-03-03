@@ -3,7 +3,8 @@
  * The template for displaying the footer.
  */
 ?>
-
+        <div class="push"></div>
+    </div><!--end div.wrapper -->
     <footer>
         footer
     </footer>

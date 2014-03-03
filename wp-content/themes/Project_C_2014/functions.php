@@ -198,14 +198,3 @@ function add_first_and_last($output) {
 add_filter('wp_nav_menu', 'add_first_and_last');
 
 ?>
-
-
-
-
-
-
-
-
-
-
-
