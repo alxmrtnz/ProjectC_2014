@@ -193,6 +193,22 @@ nav {
   font-family: 'Montserrat', 'Noto Sans', Arial, sans-serif;
   background: #444444;
   overflow: hidden; }
+  nav a.home {
+    float: left;
+    padding: 9px 30px;
+    /*&:hover{
+        background: lighten($main-black, 10%);
+    }*/ }
+    nav a.home div {
+      height: 50px;
+      width: 33px;
+      background-image: url(images/fallbackLogo.png);
+      background-repeat: no-repeat;
+      background-image: url(images/logo.svg), none;
+      background-size: 100% auto; }
+    @media screen and (max-width: 800px) {
+      nav a.home {
+        padding: 5px 20px; } }
   nav ul li {
     float: left;
     transition: opacity 0.3s ease; }
@@ -203,22 +219,6 @@ nav {
           display: block; } }
     nav ul li.right {
       float: right; }
-    nav ul li.home a {
-      float: left;
-      padding: 9px 30px;
-      /*&:hover{
-          background: lighten($main-black, 10%);
-      }*/ }
-      nav ul li.home a div {
-        height: 50px;
-        width: 33px;
-        background-image: url(images/fallbackLogo.png);
-        background-repeat: no-repeat;
-        background-image: url(images/logo.svg), none;
-        background-size: 100% auto; }
-      @media screen and (max-width: 800px) {
-        nav ul li.home a {
-          padding: 5px 20px; } }
     nav ul li a {
       color: white;
       text-decoration: none;

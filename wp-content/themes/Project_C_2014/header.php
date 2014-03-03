@@ -30,7 +30,7 @@
 	<header>
 
 		<nav>
-
+            <a class="home" href="/"><div></div></a>
 
 			<?php
 
@@ -56,6 +56,11 @@
                 wp_nav_menu($menu);
 
              ?>
+             <ul class="rightNavItems">
+                 <li class="right"><a href="" class="donate">Donate</a></li>
+                 <li class="signIn right"><a href="">Sign In</a></li>
+                 <li class="menuLink right"><a href="">Menu</a></li>
+             </ul>
 		</nav>
 
 	</header>

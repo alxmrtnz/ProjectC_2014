@@ -183,18 +183,5 @@ class Project_C_Standard_Menu extends Walker_Nav_Menu {
 }
 
 
-//This is used to add a class to the first and last list item of our main menu.
-//
-//The preg_replace('/Home/', '', $output, 1); takes the page title "Home" that we entered
-//in the backend of wordpress and replaces it with a blank space allowing our CSS to
-//take over and insert the Project C logo in the correct position. NOTE: this means that we
-//MUST keep the page title for the homepage to "Home"
-function add_first_and_last($output) {
-  $output = preg_replace('/class="menu-item/', 'class="home menu-item', $output, 1);
-  $output = preg_replace('/Home/', '', $output, 1);
-  $output = substr_replace($output, 'class="last-menu-item menu-item', strripos($output, 'class="menu-item'), strlen('class="menu-item'));
-  return $output;
-}
-add_filter('wp_nav_menu', 'add_first_and_last');
 
 ?>

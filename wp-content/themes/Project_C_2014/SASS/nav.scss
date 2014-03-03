@@ -5,6 +5,25 @@ nav{
     background: $main-black;
     overflow: hidden;
 
+    a.home{
+        float: left;
+        padding: 9px 30px;
+        /*&:hover{
+            background: lighten($main-black, 10%);
+        }*/
+        div{
+            height: 50px;
+            width: 33px;
+            background-image: url(images/fallbackLogo.png);
+            background-repeat: no-repeat;
+            background-image: url(images/logo.svg), none;
+            background-size: 100% auto;
+        }
+
+        @media screen and (max-width: $break-1){
+            padding: 5px 20px;
+        }
+    }// END .home a
 
     ul{
         li{
@@ -20,25 +39,7 @@ nav{
                 float: right;
             }
             &.home{
-                a{
-                    float: left;
-                    padding: 9px 30px;
-                    /*&:hover{
-                        background: lighten($main-black, 10%);
-                    }*/
-                    div{
-                        height: 50px;
-                        width: 33px;
-                        background-image: url(images/fallbackLogo.png);
-                        background-repeat: no-repeat;
-                        background-image: url(images/logo.svg), none;
-                        background-size: 100% auto;
-                    }
 
-                    @media screen and (max-width: $break-1){
-                        padding: 5px 20px;
-                    }
-                }// END .home a
             }// end ul li.home
             a{
                 color: white;
