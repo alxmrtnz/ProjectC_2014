@@ -30,7 +30,32 @@
 	<header>
 
 		<nav>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+
+
+			<?php
+
+                $menu = array(
+                    'theme_location'  => 'primary',
+                    'menu'            => '',
+                    'container'       => false,
+                    'container_class' => '',
+                    'container_id'    => '',
+                    'menu_class'      => 'mainNavItems',
+                    'menu_id'         => 'nav',
+                    'echo'            => true,
+                    'fallback_cb'     => 'wp_page_menu',
+                    'before'          => '',
+                    'after'           => '',
+                    'link_before'     => '',
+                    'link_after'      => '',
+                    'items_wrap'      => '<ul class="%2$s">%3$s</ul>',
+                    'depth'           => 0,
+                    'walker'          => new Project_C_Standard_Menu
+                );
+
+                wp_nav_menu($menu);
+
+             ?>
 		</nav>
 
 	</header>

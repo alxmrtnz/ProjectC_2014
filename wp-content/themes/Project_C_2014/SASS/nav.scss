@@ -1,0 +1,96 @@
+/*==================== BEGIN NAVIGATION STYLES =====================*/
+
+nav{
+    font-family: 'Montserrat', 'Noto Sans', Arial, sans-serif;
+    background: $main-black;
+    overflow: hidden;
+
+
+    ul{
+        li{
+            float: left;
+            transition: opacity 0.3s ease;
+            &.menuLink{
+                display: none;
+                @media screen and (max-width: $break-2){
+                    display: block;
+                }
+            }
+            &.right{
+                float: right;
+            }
+            &.home{
+                a{
+                    float: left;
+                    padding: 9px 30px;
+                    /*&:hover{
+                        background: lighten($main-black, 10%);
+                    }*/
+                    div{
+                        height: 50px;
+                        width: 33px;
+                        background-image: url(images/fallbackLogo.png);
+                        background-repeat: no-repeat;
+                        background-image: url(images/logo.svg), none;
+                        background-size: 100% auto;
+                    }
+
+                    @media screen and (max-width: $break-1){
+                        padding: 5px 20px;
+                    }
+                }// END .home a
+            }// end ul li.home
+            a{
+                color: white;
+                text-decoration: none;
+                padding: 28px 22px;
+                font-size: 13px;
+                display: block;
+                &.donate{
+                    background: $main-teal;
+                    padding-left: 35px;
+                    padding-right: 35px;
+                    &:hover{
+                        @include hover-bg($main-teal);
+                    }
+                }
+                @media screen and (max-width: $break-1){
+                    padding: 24px 16px;
+                }
+            }//END a
+        }//END li
+
+        &.mainNavItems{
+             width: 100%;
+             &:hover li.pageLink{
+                 @include opacity(.5);
+             }
+             &:hover li.pageLink:hover{
+                 @include opacity(1);
+             }
+             &:hover li.home{
+                 @include opacity(1);
+             }
+
+             li.pageLink{
+                @media screen and (max-width: $break-2){
+                    display: none;
+                }
+             }
+
+        }//end .mainNavItems
+
+
+        &.rightNavItems{
+            float: right;
+            li.signIn{
+                @media screen and (max-width: $break-2){
+                    display: none;
+                }
+            }
+        }
+    }//END ul
+
+}//END nav
+
+/////////////////////* END NAVIGATION STYLES */////////////////////////
