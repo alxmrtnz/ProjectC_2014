@@ -63,6 +63,12 @@ Author URI: http://alxmrtnz.com
     background-image: url(images/playIcon.svg), none;
     background-size: 100% auto;
     cursor: pointer; }
+    .mast .playBtn:hover {
+      filter: alpha(opacity=50);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+      -moz-opacity: 0.5;
+      -khtml-opacity: 0.5;
+      opacity: 0.5; }
   .mast div.copy {
     position: absolute;
     z-index: 2;
