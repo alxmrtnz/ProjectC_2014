@@ -21,6 +21,9 @@ Author URI: http://alxmrtnz.com
   position: relative;
   width: 100%;
   background: #444; }
+  @media screen and (max-width: 800px) {
+    .mast {
+      height: 350px; } }
   .mast .videoMast {
     z-index: 5;
     width: 100%;
@@ -93,15 +96,22 @@ Author URI: http://alxmrtnz.com
     .mast div.copy div.copyWrapper {
       color: #fff;
       margin: 0 auto;
+      max-width: 1000px;
       padding-bottom: 20px;
-      padding-left: 70px;
-      text-shadow: 0px 2px 7px #000;
-      width: 840px; }
+      text-shadow: 0px 2px 7px #000; }
+      @media screen and (max-width: 880px) {
+        .mast div.copy div.copyWrapper {
+          padding: 0px 20px 20px 30px; } }
       .mast div.copy div.copyWrapper h1 {
         margin-bottom: 5px; }
       .mast div.copy div.copyWrapper p.subtitle {
         font-size: 18px;
         margin-bottom: 0px; }
+      .mast div.copy div.copyWrapper h1, .mast div.copy div.copyWrapper p.subtitle {
+        padding-left: 210px; }
+        @media screen and (max-width: 880px) {
+          .mast div.copy div.copyWrapper h1, .mast div.copy div.copyWrapper p.subtitle {
+            padding: 0px; } }
 
 .orgContentWrapper {
   max-width: 1000px;
@@ -120,9 +130,9 @@ Author URI: http://alxmrtnz.com
     @media screen and (max-width: 880px) {
       .orgContentWrapper div.leftColumn {
         height: 75px;
-        padding: 0px 2%;
+        padding: 0px 0px 0px 30px;
         position: relative;
-        width: 96%; } }
+        width: 94%; } }
     .orgContentWrapper div.leftColumn div.button {
       width: 50px;
       text-align: center;
@@ -157,8 +167,9 @@ Author URI: http://alxmrtnz.com
         .orgContentWrapper div.leftColumn div.sharing {
           border: 0px;
           margin: 0px;
-          float: right;
-          padding: 5px 0px; } }
+          padding: 5px 0px;
+          position: absolute;
+          right: 15px; } }
       .orgContentWrapper div.leftColumn div.sharing .fb {
         margin-bottom: 10px; }
       @media screen and (max-width: 880px) {

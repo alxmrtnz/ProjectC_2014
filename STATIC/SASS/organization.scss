@@ -10,6 +10,9 @@
     position: relative;
     width: 100%;
     background: #444;
+    @media screen and (max-width: $break-1){
+        height:350px;
+    }
 
     .videoMast{
 
@@ -77,16 +80,27 @@
         div.copyWrapper{
             color: #fff;
             margin: 0 auto;
+            max-width:1000px;
             padding-bottom: 20px;
-            padding-left: 70px;
             text-shadow: 0px 2px 7px #000;
-            width: 840px;
+            @media screen and (max-width: $orgContentBreak-1){
+
+                padding: 0px 20px 20px 30px;
+            }
+
             h1{
                 margin-bottom: 5px;
             }
             p.subtitle{
                 font-size: 18px;
                 margin-bottom: 0px;
+            }
+
+            h1,p.subtitle{
+                padding-left: 210px;
+                @media screen and (max-width: $orgContentBreak-1){
+                    padding: 0px;
+                }
             }
         }
 
@@ -129,9 +143,9 @@
 
         @media screen and (max-width: $orgContentBreak-1){
             height: 75px;
-            padding: 0px 2%;
+            padding: 0px 0px 0px 30px;
             position: relative;
-            width: 96%;
+            width: 94%;
         }
 
         div.button{
@@ -182,8 +196,9 @@
             @media screen and (max-width: $orgContentBreak-1){
                 border: 0px;
                 margin: 0px;
-                float: right;
                 padding: 5px 0px;
+                position: absolute;
+                right: 15px;
             }
 
             .fb{
