@@ -43,8 +43,8 @@ $( document ).ready(function() {
     $(".playBtn").click(function() {
         $('.default').fadeOut('400');
         var windowWidth = $(window).width();
-        if(windowWidth > 1000){
-            newHeight = 563;
+        if(windowWidth > 1200){
+            newHeight = 675.6;
         }
         else{
             var newHeight= 0.563 * windowWidth;
