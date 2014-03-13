@@ -1,13 +1,13 @@
 $( document ).ready(function() {
 
-    //at 500px scrolling, change leftColumn to fixed
+    //LEFT COLUMN SIDEBAR SCROLLING FUNCTIONS at 500px scrolling, change leftColumn to fixed
     var $leftColumn = $('div.leftColumn');
 
     var fromTop = function () {
         var mastHeight = $('.mast').height();
 
         if ($(window).width() > 880) {
-            if($('body').scrollTop() >= mastHeight + 70){
+            if(($('body').scrollTop() >= mastHeight + 70) || ($('html').scrollTop() >= mastHeight + 70)){
                 $leftColumn.css({
                     position: 'fixed',
                     top: '30px'
@@ -18,25 +18,13 @@ $( document ).ready(function() {
                     top: '0px'
                 });
             }
-        };
+        }
 
     };
-
-    var playVideo = function(){
-        var iframe = $(".vimeo-iframe")[0];
-        console.log("iframe: " + iframe);
-        var player = $f(iframe);
-        player.api("play");
-    };
-    var pauseVideo = function(){
-        var iframe = $(".vimeo-iframe")[0];
-        console.log("iframe: " + iframe);
-        var player = $f(iframe);
-        player.api("pause");
-    };
-
 
     fromTop(); //initial setting for leftColumn (used if page loads more than 500px from top already)
+
+
 
     $(document).scroll(function() {
         //constantly checks for distance from top in order to set leftColumn
@@ -55,9 +43,34 @@ $( document ).ready(function() {
         fromTop();
       }
     });
-    //////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+    //VIDEO PLAYING FUNCTIONS (using Froogaloop.js)
+    var playVideo = function(){
+        var iframe = $(".vimeo-iframe")[0];
+        console.log("iframe: " + iframe);
+        var player = $f(iframe);
+        player.api("play");
+    };
+    var pauseVideo = function(){
+        var iframe = $(".vimeo-iframe")[0];
+        console.log("iframe: " + iframe);
+        var player = $f(iframe);
+        player.api("pause");
+    };
+    ////////////////////////////////////////////////////////
+
+
+
+
+    //VIDEO PLAYING EVENTS
+    var initialMastHeight = $('.mast').height();
 
     $(".playBtn").click(function() {
+        initialMastHeight = $('.mast').height();
         $('.default').fadeOut('400');
         var windowWidth = $(window).width();
         if(windowWidth > 1200){
@@ -65,6 +78,7 @@ $( document ).ready(function() {
         }
         else{
             var newHeight= 0.563 * windowWidth;
+            console.log("NEWHEIGHT: " + newHeight);
         }
 
         $('.mast').animate({
@@ -91,9 +105,9 @@ $( document ).ready(function() {
         var windowWidth = $(window).width();
 
 
-        $('.mast').animate({ height: '430px'}, 400, function() {
+        $('.mast').animate({ height: initialMastHeight}, 400, function() {
                 $('.mast').css({
-                    height: '430px',
+                    height: initialMastHeight,
                     overflow: 'hidden'
                 });
                 setTimeout(function(){
@@ -104,7 +118,7 @@ $( document ).ready(function() {
     });
 
     $(".iframeContainer").fitVids();
-
+    //////////////////////////////////////////////////////////////////////
 
 
 
