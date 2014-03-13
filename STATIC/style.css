@@ -63,12 +63,6 @@ Author URI: http://alxmrtnz.com
     background-image: url(images/playIcon.svg), none;
     background-size: 100% auto;
     cursor: pointer; }
-    .mast .playBtn:hover {
-      filter: alpha(opacity=50);
-      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-      -moz-opacity: 0.5;
-      -khtml-opacity: 0.5;
-      opacity: 0.5; }
   .mast div.copy {
     position: absolute;
     z-index: 2;
@@ -112,30 +106,61 @@ Author URI: http://alxmrtnz.com
     /*this was added to shift all main content to the left 70px. This offsets the content instead of having it perfectly centered. We may not want this. NOTE: if you do remove, make sure to remove the div.content tag in the individual organization HTML file*/
     position: relative; }
   .orgContentWrapper div.leftColumn {
-    width: 170px;
+    font-family: 'Noto Sans', Arial, sans-serif;
     height: 400px;
     position: absolute;
     top: 0px;
-    font-family: 'Noto Sans', Arial, sans-serif; }
+    width: 170px; }
+    @media screen and (max-width: 880px) {
+      .orgContentWrapper div.leftColumn {
+        height: 75px;
+        padding: 0px 2%;
+        position: relative;
+        width: 96%; } }
     .orgContentWrapper div.leftColumn div.button {
       width: 50px;
       text-align: center;
       margin-left: 33px; }
-    .orgContentWrapper div.leftColumn div.voting .currentVotes {
+      @media screen and (max-width: 880px) {
+        .orgContentWrapper div.leftColumn div.button {
+          margin-left: 0px; } }
+    @media screen and (max-width: 880px) {
+      .orgContentWrapper div.leftColumn div.voting {
+        float: left;
+        width: 200px; } }
+    @media screen and (max-width: 880px) {
+      .orgContentWrapper div.leftColumn div.voting .currentVoteContainer {
+        float: left; } }
+    .orgContentWrapper div.leftColumn div.voting .currentVoteContainer .currentVotes {
       font-size: 13px;
       text-align: center;
       margin-bottom: 5px; }
-    .orgContentWrapper div.leftColumn div.voting .tally {
+    .orgContentWrapper div.leftColumn div.voting .currentVoteContainer .tally {
       text-align: center;
       font-size: 36px;
       margin-bottom: 5px; }
+    @media screen and (max-width: 880px) {
+      .orgContentWrapper div.leftColumn div.voting .button {
+        margin: 5px 0px 0px 15px; } }
     .orgContentWrapper div.leftColumn div.sharing {
       border-bottom: 1px solid #ececec;
       border-top: 1px solid #ececec;
       margin: 30px 0px;
       padding: 10px 0px; }
+      @media screen and (max-width: 880px) {
+        .orgContentWrapper div.leftColumn div.sharing {
+          border: 0px;
+          margin: 0px;
+          float: right;
+          padding: 5px 0px; } }
       .orgContentWrapper div.leftColumn div.sharing .fb {
         margin-bottom: 10px; }
+      @media screen and (max-width: 880px) {
+        .orgContentWrapper div.leftColumn div.sharing .fb, .orgContentWrapper div.leftColumn div.sharing .tweet {
+          margin: 0px; } }
+    @media screen and (max-width: 880px) {
+      .orgContentWrapper div.leftColumn div.subNav {
+        display: none; } }
     .orgContentWrapper div.leftColumn div.subNav ul {
       padding-right: 37px; }
       .orgContentWrapper div.leftColumn div.subNav ul li {
@@ -150,6 +175,14 @@ Author URI: http://alxmrtnz.com
     padding: 30px 110px 20px 40px;
     margin-left: 169px;
     /* END .story - this is to hide most of the written word*/ }
+    @media screen and (max-width: 880px) {
+      .orgContentWrapper .mainContent {
+        background: #fff;
+        border: 1px solid #ececec;
+        margin: 0px !important;
+        padding: 30px 4%;
+        width: 92% !important;
+        max-width: 92%; } }
     .orgContentWrapper .mainContent div.breadCrumbs {
       font-family: 'Noto Sans', Arial, sans-serif;
       font-size: 14px;

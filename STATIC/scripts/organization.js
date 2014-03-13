@@ -5,17 +5,21 @@ $( document ).ready(function() {
 
     var fromTop = function () {
         var mastHeight = $('.mast').height();
-        if($('body').scrollTop() >= mastHeight + 70){
-            $leftColumn.css({
-                position: 'fixed',
-                top: '30px'
-            });
-        } else{
-            $leftColumn.css({
-                position: 'absolute',
-                top: '0px'
-            });
-        }
+
+        if ($(window).width() > 880) {
+            if($('body').scrollTop() >= mastHeight + 70){
+                $leftColumn.css({
+                    position: 'fixed',
+                    top: '30px'
+                });
+            } else{
+                $leftColumn.css({
+                    position: 'absolute',
+                    top: '0px'
+                });
+            }
+        };
+
     };
 
     var playVideo = function(){
@@ -39,6 +43,19 @@ $( document ).ready(function() {
         fromTop();
     });
 
+
+    //resize function to change CSS of left column. Did this because if done in just CSS, I think the JS will override the styles on any sort of scroll, thereby negating the new media queried styles
+    $(window).resize(function() {
+      if($(this).width() < 880){
+        $leftColumn.css({
+            position: 'relative',
+            top: '0px'
+        });
+      } else{
+        fromTop();
+      }
+    });
+    //////////////////////////////////////////////////////////
 
     $(".playBtn").click(function() {
         $('.default').fadeOut('400');
@@ -86,7 +103,7 @@ $( document ).ready(function() {
         });
     });
 
-$(".iframeContainer").fitVids();
+    $(".iframeContainer").fitVids();
 
 
 
