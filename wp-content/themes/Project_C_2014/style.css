@@ -1,17 +1,246 @@
 /*
 Theme Name: Project C 2014
-Theme URI:
+Theme URI: [GitHub Link]
 Description: A theme created by Ohio University Interactive Multimedia capstone class for the 2014 edition of Project C
 Version: 1.0
 Author: Alex Martinez, Lindsay Cherry, Chris Kennedy, Sabrina Reda, Connor Sibrik
 Author URI: http://alxmrtnz.com
 */
 /* Styles go below */
-/* COLORS */
-/* VARIABLES */
-/* MIXINS */
-/* IMPORTS */
-/*==================== BEGIN ORG PAGE STYLES =====================*/
+
+
+
+
+/** * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+
+
+/*==================== BEGIN NAVIGATION STYLES =====================*/
+nav {
+  font-family: 'Montserrat', 'Noto Sans', Arial, sans-serif;
+  background: #444444;
+  overflow: hidden; }
+  nav a.logo {
+    float: left;
+    padding: 9px 30px;
+    /*&:hover{
+        background: lighten($main-black, 10%);
+    }*/ }
+    nav a.logo div {
+      height: 50px;
+      width: 33px;
+      background-image: url(images/fallbackLogo.png);
+      background-repeat: no-repeat;
+      background-image: url(images/logo.svg), none;
+      background-size: 100% auto; }
+    @media screen and (max-width: 800px) {
+      nav a.logo {
+        padding: 5px 20px; } }
+  nav ul li {
+    float: left;
+    transition: opacity 0.3s ease; }
+    nav ul li.menuLink {
+      display: none; }
+      @media screen and (max-width: 700px) {
+        nav ul li.menuLink {
+          display: block; } }
+    nav ul li.right {
+      float: right; }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 28px 22px;
+      font-size: 13px;
+      display: block; }
+      nav ul li a.donate {
+        background: #529eab;
+        padding-left: 35px;
+        padding-right: 35px; }
+        nav ul li a.donate:hover {
+          background: #63a8b4; }
+      @media screen and (max-width: 800px) {
+        nav ul li a {
+          padding: 24px 16px; } }
+  nav ul.mainNavItems {
+    width: 100%; }
+    nav ul.mainNavItems:hover li.pageLink {
+      filter: alpha(opacity=50);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+      -moz-opacity: 0.5;
+      -khtml-opacity: 0.5;
+      opacity: 0.5; }
+    nav ul.mainNavItems:hover li.pageLink:hover {
+      filter: alpha(opacity=100);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+      -moz-opacity: 1;
+      -khtml-opacity: 1;
+      opacity: 1; }
+    @media screen and (max-width: 700px) {
+      nav ul.mainNavItems li.pageLink {
+        display: none; } }
+  nav ul.rightNavItems {
+    float: right; }
+    @media screen and (max-width: 700px) {
+      nav ul.rightNavItems li.signIn {
+        display: none; } }
+
+
+
+
+
+
+
+/*====================================== BEGIN INDEX STYLES ====================================*/
+#intro {
+  text-align: center;
+  margin: 40px 10px auto 10px; }
+
+#introPic {
+  max-width: 100%; }
+
+#orgs2014 {
+  margin: 60px 10px auto 10px; }
+  #orgs2014 h2 {
+    text-align: center; }
+
+.orgPreview {
+  text-align: left;
+  margin: 50px 10%;
+  clear: both; }
+  .orgPreview img {
+    float: left;
+    padding: 0 30px 30px 0; }
+
+#indexBlog {
+  margin: 150px auto auto 10%;
+  text-align: left; }
+  #indexBlog #blogPreview {
+    width: 55%;
+    padding: 0 70px 30px 0;
+    float: left; }
+  #indexBlog h1 {
+    margin-bottom: 10px; }
+  #indexBlog h2 {
+    margin-bottom: 10px; }
+  #indexBlog .blogItems {
+    padding-bottom: 40px; }
+/*====================================== END INDEX STYLES ====================================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*====================================== BEGIN UNIVERSAL STYLES ====================================*/
+body {
+  color: #444444;
+  background: #fafafa;
+  /* DEFAULT BUTTON STYLES */ }
+  body div.contentWrapper {
+    max-width: 1000px;
+    margin: 0 auto; }
+  body h1 {
+    font-family: 'Noto Sans', Arial, sans-serif;
+    font-size: 40px;
+    font-weight: 700; }
+  body h2 {
+    font-family: 'Noto Sans', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 700; }
+  body h3 {
+    font-family: 'Noto Sans', Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 700; }
+  body p {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 20px;
+    line-height: 34px;
+    margin-bottom: 30px; }
+  body div.button {
+    background: #529eab;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 14px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 15px 25px;
+    text-decoration: none; }
+    body div.button:hover {
+      background: #63a8b4; }
+    body div.button.fb {
+      background: #355996; }
+      body div.button.fb:hover {
+        background: #3c64a9; }
+    body div.button.twitter {
+      background: #00a8de; }
+      body div.button.twitter:hover {
+        background: #00bbf8; }
+
+/*====================================== END UNIVERSAL STYLES ====================================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*====================================== BEGIN ORG PAGE STYLES ====================================*/
 .sidedock {
   top: 30px !important; }
 
@@ -21,13 +250,16 @@ Author URI: http://alxmrtnz.com
   position: relative;
   width: 100%;
   background: #444; }
+  @media screen and (max-width: 800px) {
+    .mast {
+      height: 350px; } }
   .mast .videoMast {
     z-index: 5;
     width: 100%;
     background: #222;
     display: none; }
     .mast .videoMast .iframeContainer {
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 0 auto;
       position: relative; }
     .mast .videoMast .close {
@@ -93,15 +325,22 @@ Author URI: http://alxmrtnz.com
     .mast div.copy div.copyWrapper {
       color: #fff;
       margin: 0 auto;
+      max-width: 1000px;
       padding-bottom: 20px;
-      padding-left: 70px;
-      text-shadow: 0px 2px 7px #000;
-      width: 840px; }
+      text-shadow: 0px 2px 7px #000; }
+      @media screen and (max-width: 880px) {
+        .mast div.copy div.copyWrapper {
+          padding: 0px 20px 20px 30px; } }
       .mast div.copy div.copyWrapper h1 {
         margin-bottom: 5px; }
       .mast div.copy div.copyWrapper p.subtitle {
         font-size: 18px;
         margin-bottom: 0px; }
+      .mast div.copy div.copyWrapper h1, .mast div.copy div.copyWrapper p.subtitle {
+        padding-left: 210px; }
+        @media screen and (max-width: 880px) {
+          .mast div.copy div.copyWrapper h1, .mast div.copy div.copyWrapper p.subtitle {
+            padding: 0px; } }
 
 .orgContentWrapper {
   max-width: 1000px;
@@ -112,30 +351,62 @@ Author URI: http://alxmrtnz.com
     /*this was added to shift all main content to the left 70px. This offsets the content instead of having it perfectly centered. We may not want this. NOTE: if you do remove, make sure to remove the div.content tag in the individual organization HTML file*/
     position: relative; }
   .orgContentWrapper div.leftColumn {
-    width: 170px;
+    font-family: 'Noto Sans', Arial, sans-serif;
     height: 400px;
     position: absolute;
     top: 0px;
-    font-family: 'Noto Sans', Arial, sans-serif; }
+    width: 170px; }
+    @media screen and (max-width: 880px) {
+      .orgContentWrapper div.leftColumn {
+        height: 75px;
+        padding: 0px 0px 0px 30px;
+        position: relative;
+        width: 94%; } }
     .orgContentWrapper div.leftColumn div.button {
       width: 50px;
       text-align: center;
       margin-left: 33px; }
-    .orgContentWrapper div.leftColumn div.voting .currentVotes {
+      @media screen and (max-width: 880px) {
+        .orgContentWrapper div.leftColumn div.button {
+          margin-left: 0px; } }
+    @media screen and (max-width: 880px) {
+      .orgContentWrapper div.leftColumn div.voting {
+        float: left;
+        width: 200px; } }
+    @media screen and (max-width: 880px) {
+      .orgContentWrapper div.leftColumn div.voting .currentVoteContainer {
+        float: left; } }
+    .orgContentWrapper div.leftColumn div.voting .currentVoteContainer .currentVotes {
       font-size: 13px;
       text-align: center;
       margin-bottom: 5px; }
-    .orgContentWrapper div.leftColumn div.voting .tally {
+    .orgContentWrapper div.leftColumn div.voting .currentVoteContainer .tally {
       text-align: center;
       font-size: 36px;
       margin-bottom: 5px; }
+    @media screen and (max-width: 880px) {
+      .orgContentWrapper div.leftColumn div.voting .button {
+        margin: 5px 0px 0px 15px; } }
     .orgContentWrapper div.leftColumn div.sharing {
       border-bottom: 1px solid #ececec;
       border-top: 1px solid #ececec;
       margin: 30px 0px;
       padding: 10px 0px; }
+      @media screen and (max-width: 880px) {
+        .orgContentWrapper div.leftColumn div.sharing {
+          border: 0px;
+          margin: 0px;
+          padding: 5px 0px;
+          position: absolute;
+          right: 15px; } }
       .orgContentWrapper div.leftColumn div.sharing .fb {
         margin-bottom: 10px; }
+      @media screen and (max-width: 880px) {
+        .orgContentWrapper div.leftColumn div.sharing .fb, .orgContentWrapper div.leftColumn div.sharing .tweet {
+          margin: 0px; } }
+    @media screen and (max-width: 880px) {
+      .orgContentWrapper div.leftColumn div.subNav {
+        display: none; } }
     .orgContentWrapper div.leftColumn div.subNav ul {
       padding-right: 37px; }
       .orgContentWrapper div.leftColumn div.subNav ul li {
@@ -150,6 +421,14 @@ Author URI: http://alxmrtnz.com
     padding: 30px 110px 20px 40px;
     margin-left: 169px;
     /* END .story - this is to hide most of the written word*/ }
+    @media screen and (max-width: 880px) {
+      .orgContentWrapper .mainContent {
+        background: #fff;
+        border: 1px solid #ececec;
+        margin: 0px !important;
+        padding: 30px 4%;
+        width: 92% !important;
+        max-width: 92%; } }
     .orgContentWrapper .mainContent div.breadCrumbs {
       font-family: 'Noto Sans', Arial, sans-serif;
       font-size: 14px;
@@ -158,196 +437,24 @@ Author URI: http://alxmrtnz.com
       padding-bottom: 15px;
       margin-bottom: 25px; }
 
-/** * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
+/*====================================== END ORG PAGE STYLES ====================================*/
 
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-  display: block; }
 
-body {
-  line-height: 1; }
 
-ol, ul {
-  list-style: none; }
 
-blockquote, q {
-  quotes: none; }
 
-blockquote:before, blockquote:after, q:before, q:after {
-  content: '';
-  content: none; }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
 
-/*==================== BEGIN NAVIGATION STYLES =====================*/
-nav {
-  font-family: 'Montserrat', 'Noto Sans', Arial, sans-serif;
-  background: #444444;
-  overflow: hidden; }
-  nav a.home {
-    float: left;
-    padding: 9px 30px;
-    /*&:hover{
-        background: lighten($main-black, 10%);
-    }*/ }
-    nav a.home div {
-      height: 50px;
-      width: 33px;
-      background-image: url(images/fallbackLogo.png);
-      background-repeat: no-repeat;
-      background-image: url(images/logo.svg), none;
-      background-size: 100% auto; }
-    @media screen and (max-width: 800px) {
-      nav a.home {
-        padding: 5px 20px; } }
-  nav ul li {
-    float: left;
-    transition: opacity 0.3s ease; }
-    nav ul li.menuLink {
-      display: none; }
-      @media screen and (max-width: 700px) {
-        nav ul li.menuLink {
-          display: block; } }
-    nav ul li.right {
-      float: right; }
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      padding: 28px 22px;
-      font-size: 13px;
-      display: block; }
-      nav ul li a.donate {
-        background: #529eab;
-        padding-left: 35px;
-        padding-right: 35px; }
-        nav ul li a.donate:hover {
-          background: #63a8b4; }
-      @media screen and (max-width: 800px) {
-        nav ul li a {
-          padding: 24px 16px; } }
-  nav ul.mainNavItems {
-    width: 100%; }
-    nav ul.mainNavItems:hover li.pageLink {
-      filter: alpha(opacity=50);
-      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-      -moz-opacity: 0.5;
-      -khtml-opacity: 0.5;
-      opacity: 0.5; }
-    nav ul.mainNavItems:hover li.pageLink:hover {
-      filter: alpha(opacity=100);
-      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-      -moz-opacity: 1;
-      -khtml-opacity: 1;
-      opacity: 1; }
-    nav ul.mainNavItems:hover li.home {
-      filter: alpha(opacity=100);
-      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-      -moz-opacity: 1;
-      -khtml-opacity: 1;
-      opacity: 1; }
-    @media screen and (max-width: 700px) {
-      nav ul.mainNavItems li.pageLink {
-        display: none; } }
-  nav ul.rightNavItems {
-    float: right; }
-    @media screen and (max-width: 700px) {
-      nav ul.rightNavItems li.signIn {
-        display: none; } }
 
-/* Index Styles */
-#intro {
-  text-align: center;
-  margin: 40px 10px auto 10px; }
 
-#introPic {
-  max-width: 100%; }
 
-#orgs2014 {
-  margin: 60px 10px auto 10px; }
-  #orgs2014 h2 {
-    text-align: center; }
 
-.orgPreview {
-  text-align: left;
-  margin: 50px 10%;
-  clear: both; }
-  .orgPreview img {
-    float: left;
-    padding: 0 30px 30px 0; }
 
-#indexBlog {
-  margin: 150px auto auto 10%;
-  text-align: left; }
-  #indexBlog #blogPreview {
-    width: 55%;
-    padding: 0 70px 30px 0;
-    float: left; }
-  #indexBlog h1 {
-    margin-bottom: 10px; }
-  #indexBlog h2 {
-    margin-bottom: 10px; }
-  #indexBlog .blogItems {
-    padding-bottom: 40px; }
 
-/*==================== BEGIN UNIVERSAL STYLES =====================*/
-body {
-  color: #444444;
-  background: #fafafa;
-  /* DEFAULT BUTTON STYLES */ }
-  body div.contentWrapper {
-    max-width: 1000px;
-    margin: 0 auto; }
-  body h1 {
-    font-family: 'Noto Sans', Arial, sans-serif;
-    font-size: 40px;
-    font-weight: 700; }
-  body h2 {
-    font-family: 'Noto Sans', Arial, sans-serif;
-    font-size: 20px;
-    font-weight: 700; }
-  body h3 {
-    font-family: 'Noto Sans', Arial, sans-serif;
-    font-size: 15px;
-    font-weight: 700; }
-  body p {
-    font-family: 'Merriweather', Georgia, serif;
-    font-size: 20px;
-    line-height: 34px;
-    margin-bottom: 30px; }
-  body div.button {
-    background: #529eab;
-    color: white;
-    cursor: pointer;
-    display: inline-block;
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-size: 14px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-    border-radius: 5px;
-    overflow: hidden;
-    padding: 15px 25px;
-    text-decoration: none; }
-    body div.button:hover {
-      background: #63a8b4; }
-    body div.button.fb {
-      background: #355996; }
-      body div.button.fb:hover {
-        background: #3c64a9; }
-    body div.button.twitter {
-      background: #00a8de; }
-      body div.button.twitter:hover {
-        background: #00bbf8; }
+
+
+
+
 
 /*==================== BEGIN FOOTER STYLES =====================*/
 html, body {
