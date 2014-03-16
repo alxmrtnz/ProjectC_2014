@@ -271,7 +271,9 @@ body {
     .mast .videoMast .close .exit{
         width: 85px;
         margin: 0 auto;
-        background: #ddd;
+        color: #fff;
+        font-family: 'Merriweather', Georgia, serif;
+        background: #d33d45;
         padding: 5px 25px;
         -webkit-border-bottom-right-radius: 5px;
         -webkit-border-bottom-left-radius: 5px;
