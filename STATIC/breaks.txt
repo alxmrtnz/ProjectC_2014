@@ -1,5 +1,20 @@
-Menu Break 1: 700px
-Org Mast Break: 800px
+/* COLORS */
+$main-teal: #529eab;
 
 
-main gray: #444444
+$main-black: #444444;
+$main-grey: #111111;
+$main-red: #d33d45;
+$main-yellow: #e2cd34;
+$main-green: #72b574;
+$main-tan: #fafafa;
+
+$fb-blue: #355996;
+$twitter-blue: #00a8de;
+
+
+/* VARIABLES */
+$orgContentBreak-1: 880px;
+$break-1: 800px;
+$break-2: 700px;
+/* MIXINS */
