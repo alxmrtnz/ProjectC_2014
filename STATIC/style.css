@@ -245,7 +245,7 @@ body {
   top: 30px !important; }
 
 .mast {
-  height: 430px;
+  height: 500px;
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -263,10 +263,23 @@ body {
       margin: 0 auto;
       position: relative; }
     .mast .videoMast .close {
-      position: absolute;
-      bottom: -23px;
-      cursor: pointer;
-      right: 10px; }
+        height:20px;
+        cursor: pointer;
+        right: 10px;
+        background: #fafafa;
+  }
+    .mast .videoMast .close .exit{
+        width: 85px;
+        margin: 0 auto;
+        background: #ddd;
+        padding: 5px 25px;
+        -webkit-border-bottom-right-radius: 5px;
+        -webkit-border-bottom-left-radius: 5px;
+        -moz-border-radius-bottomright: 5px;
+        -moz-border-radius-bottomleft: 5px;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
   .mast .bg {
     position: absolute;
     top: 0;
@@ -288,13 +301,18 @@ body {
     width: 100px;
     height: 100px;
     position: relative;
-    margin: 150px auto 0px auto;
+    margin: 185px auto 0px auto;
     z-index: 3;
     background-image: url(images/playIconFallback.png);
     background-repeat: no-repeat;
     background-image: url(images/playIcon.svg), none;
     background-size: 100% auto;
     cursor: pointer; }
+    @media screen and (max-width: 800px){
+        .mast .playBtn{
+            margin-top: 115px;
+        }
+    }
     .mast .playBtn:hover {
       filter: alpha(opacity=50);
       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
