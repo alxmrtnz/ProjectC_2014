@@ -6,17 +6,41 @@
 <html>
 <head>
 
-	<title><?php wp_title( '|', true, 'right' ); ?></title>
+	<title><?php wp_title( '| Project C', true, 'right' ); ?></title>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <link rel="author" href="humans.txt">
 
+	
+	
     <!-- BEGIN WEB FONTS -->
     <link href='http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    
+	    <!-- begin icon fonts -->
+		<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/fontello.css" type="text/css" >
+	    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/animation.css" type="text/css" >
+	    <!--[if IE 7]>
+	    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/fontello-ie7.css">
+	    <![endif]-->
+	    <script>
+	      function toggleCodes(on) {
+	        var obj = document.getElementById('icons');
+	        
+	        if (on) {
+	          obj.className += ' codesOn';
+	        } else {
+	          obj.className = obj.className.replace(' codesOn', '');
+	        }
+	      }
+	      
+	    </script>
+		<!-- end icon fonts -->
+	
+	
     <!-- END WEB FONTS -->
 
 	<?php wp_head(); ?>

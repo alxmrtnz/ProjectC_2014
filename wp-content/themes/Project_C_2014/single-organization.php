@@ -11,6 +11,9 @@
 get_header(); ?>
 
 
+
+
+
 	<section class="mast">
                 <div class="videoMast">
                     <div class="iframeContainer">
@@ -49,17 +52,25 @@ get_header(); ?>
             <div class="orgContentWrapper">
                 <div class="content">
                     <div class="leftColumn">
+                    
                         <div class="voting">
                             <div class="currentVoteContainer">
                                 <div class="currentVotes">Current Votes</div>
                                 <div class="tally">236</div>
                             </div>
 
-                            <div class="button">Vote</div>
+                            <div class="defaultButton button">Vote</div>
                         </div><!-- end .voting -->
                         <div class="sharing">
-                            <div class="button fb">Share</div>
-                            <div class="button twitter">Tweet</div>
+                        
+                            <div class="button fb">
+                            	<a target="_blank" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=300')" href="http://www.facebook.com/sharer/sharer.php?u=https://developers.facebook.com/docs/plugins/"><i class="icon-facebook"></i> Share
+	                            	
+                            	</a>
+                            </div>
+                            <div class="button twitter"><a target="_blank" onclick="return !window.open(this.href, 'Facebook', 'width=640,height=300')" href="http://twitter.com/share?text=This%20is%20so%20easy"><i class="icon-twitter"></i> Tweet</a></div>
+                            
+                            <!-- link to article on possible centering of popup window:stackoverflow.com/questions/4068373/center-a-popup-window-on-screen -->
                         </div><!-- end .sharing -->
                         <div class="subNav">
                             <ul>
@@ -70,9 +81,11 @@ get_header(); ?>
                         </div>
                     </div>
                     <section class="mainContent">
-                        <div class="breadCrumbs">
-                            Home > 2014 Nonprofits > The Gathering Place
-                        </div>
+                        <nav class="breadCrumbs">
+							<?php if( function_exists( 'bcn_display' ) ) {
+								bcn_display();
+								} ?>
+				        </nav><!-- breadcrumb -->
                         <div class="story">
                             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
@@ -90,6 +103,9 @@ get_header(); ?>
                     </section><!-- end .mainContent -->
                 </div> <!-- end .content -->
             </div><!-- end .orgContentWrapper -->
+            
+            
+
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
