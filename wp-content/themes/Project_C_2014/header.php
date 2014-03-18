@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    
     <link rel="author" href="humans.txt">
 
     <!-- BEGIN WEB FONTS -->
@@ -28,39 +28,71 @@
 <div class="wrapper">
 
 	<header>
+		<div class="navWrapper">
+			<nav class="mainNav">
+	            <a class="logo" href="/"><div></div></a>
+	
+				<?php
+	
+	                $menu = array(
+	                    'theme_location'  => 'primary',
+	                    'menu'            => '',
+	                    'container'       => false,
+	                    'container_class' => '',
+	                    'container_id'    => '',
+	                    'menu_class'      => 'mainNavItems',
+	                    'menu_id'         => 'nav',
+	                    'echo'            => true,
+	                    'fallback_cb'     => 'wp_page_menu',
+	                    'before'          => '',
+	                    'after'           => '',
+	                    'link_before'     => '',
+	                    'link_after'      => '',
+	                    'items_wrap'      => '<ul class="%2$s">%3$s</ul>',
+	                    'depth'           => 0,
+	                    'walker'          => new Project_C_Standard_Menu
+	                );
+	
+	                wp_nav_menu($menu);
+	
+	             ?>
+	             <ul class="rightNavItems">
+	                 <li class="right"><a href="" class="donate">Donate</a></li>
+	                 <li class="signIn right"><a href="">Sign In</a></li>
+	                 <li class="menuLink right">Menu</li>
+	             </ul>
+			</nav>
+			
+			<nav class="mobile">
+	            <div class="mobileHeight">
+                <?php
 
-		<nav>
-            <a class="home" href="/"><div></div></a>
+                    $menu = array(
+                        'theme_location'  => 'primary',
+                        'menu'            => '',
+                        'container'       => false,
+                        'container_class' => '',
+                        'container_id'    => '',
+                        'menu_class'      => 'mobileNavItems',
+                        'menu_id'         => 'nav',
+                        'echo'            => true,
+                        'fallback_cb'     => 'wp_page_menu',
+                        'before'          => '',
+                        'after'           => '',
+                        'link_before'     => '',
+                        'link_after'      => '',
+                        'items_wrap'      => '<ul class="%2$s">%3$s</ul>',
+                        'depth'           => 0,
+                        'walker'          => new Project_C_Standard_Menu
+                    );
 
-			<?php
 
-                $menu = array(
-                    'theme_location'  => 'primary',
-                    'menu'            => '',
-                    'container'       => false,
-                    'container_class' => '',
-                    'container_id'    => '',
-                    'menu_class'      => 'mainNavItems',
-                    'menu_id'         => 'nav',
-                    'echo'            => true,
-                    'fallback_cb'     => 'wp_page_menu',
-                    'before'          => '',
-                    'after'           => '',
-                    'link_before'     => '',
-                    'link_after'      => '',
-                    'items_wrap'      => '<ul class="%2$s">%3$s</ul>',
-                    'depth'           => 0,
-                    'walker'          => new Project_C_Standard_Menu
-                );
 
-                wp_nav_menu($menu);
+                    wp_nav_menu($menu);
 
-             ?>
-             <ul class="rightNavItems">
-                 <li class="right"><a href="" class="donate">Donate</a></li>
+                 ?>
                  <li class="signIn right"><a href="">Sign In</a></li>
-                 <li class="menuLink right"><a href="">Menu</a></li>
-             </ul>
-		</nav>
-
+            </div>
+	        </nav>
+		</div><!-- end .navWrapper -->
 	</header>
