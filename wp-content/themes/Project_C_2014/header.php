@@ -49,6 +49,25 @@
 
 <body <?php body_class(); ?>>
 
+
+	<!-- form for ajax login, found here: natko.com/wordpress-ajax-login-without-a-plugin-the-right-way/-->
+	<!-- check this for possible confirmation emails to new accounts: http://wordpress.org/support/topic/stop-spam-confirmation-emails-to-all-new-registrations maybe this too: http://wordpress.org/plugins/pie-register/ and maybe this: http://wordpress.org/plugins/dm-confirm-email/screenshots/ -->
+	<form id="login" action="login" method="post" class="loginForm">
+        <h1>Site Login</h1>
+        <p class="status"></p>
+        <label for="username">Username</label>
+        <input id="username" type="text" name="username">
+        <label for="password">Password</label>
+        <input id="password" type="password" name="password">
+        <a class="lost" href="<?php echo wp_lostpassword_url(); ?>">Lost your password?</a>
+        <input class="submit_button" type="submit" value="Login" name="submit">
+        <a class="close" href="">(close)</a>
+        <?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
+    </form>
+    
+    
+    
+
 <div class="wrapper">
 
 	<header>
@@ -82,7 +101,19 @@
 	             ?>
 	             <ul class="rightNavItems">
 	                 <li class="right"><a href="" class="donate">Donate</a></li>
-	                 <li class="signIn right"><a href="">Sign In</a></li>
+	                 
+	                 
+	                 <li class="signIn right">
+		                 
+		                 <?php if (is_user_logged_in()) { ?>
+						    <a class="login_button" href="<?php echo wp_logout_url(get_permalink() ); ?>"> 
+						    	<!--wordpress.org/support/topic/avatar-display-for-logged-in-users-->
+						    	<?php global $userdata; get_currentuserinfo(); echo get_avatar( $userdata->ID, 20 ); ?>Sign Out
+						    </a>
+						<?php } else { ?>
+						    <a class="login_button" id="show_login" href="">Sign In</a>
+						<?php } ?>
+	                 </li>
 	                 <li class="menuLink right">Menu</li>
 	             </ul>
 			</nav>

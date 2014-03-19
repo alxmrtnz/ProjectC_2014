@@ -28,9 +28,13 @@ get_header(); ?>
                 </div>
 
                 <div class="default">
-                    <div class="playBtn">
+                
+                	<?php if( get_field('video_link') ): ?>
+						<div class="playBtn">
 
-                    </div>
+						</div>
+					<?php endif; ?>
+                    
                     <div class="copy">
                         <div class="copyWrapper">
                             <h1><?php wp_title(''); ?></h1>
@@ -96,11 +100,23 @@ get_header(); ?>
 							      <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
 							
 							<?php endif; ?>
+							
+						
 
 
                         </div><!-- end .story -->
 
                     </section><!-- end .mainContent -->
+                    <section class="mainContent" id="infographic">
+                    
+	                    <?php the_field('infographic_title'); ?>
+                    
+						<?php the_field('infographic_subtitle'); ?>
+						
+						
+						<img class="alignnone  wp-image-35" alt="gatheringplace" src="<?php the_field('infographic_image'); ?>" width="" height="auto">
+                    
+                    </section>
                 </div> <!-- end .content -->
             </div><!-- end .orgContentWrapper -->
             
