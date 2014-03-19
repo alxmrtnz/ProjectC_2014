@@ -34,7 +34,7 @@ function migration_setup() {
 
 	// This theme uses a custom image size for featured images, displayed on "standard" posts.
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 500, 9999 ); // Unlimited height, soft crop
+	
 }
 add_action( 'after_setup_theme', 'migration_setup' );
 
@@ -66,6 +66,71 @@ add_action( 'wp_enqueue_scripts', 'migration_scripts_styles' );
 
 
 
+//TEST PHP AJAX LOGIN FORM FUNCTIONS
+
+function ajax_login_init(){
+
+    wp_register_script('ajax-login-script', get_template_directory_uri() . '/scripts/ajax-login-script.js', array('jquery') ); 
+    wp_enqueue_script('ajax-login-script');
+
+    wp_localize_script( 'ajax-login-script', 'ajax_login_object', array( 
+        'ajaxurl' => admin_url( 'admin-ajax.php' ),
+        'redirecturl' => get_permalink(),
+        'loadingmessage' => __('Sending user info, please wait...')
+    ));
+
+    // Enable the user with no privileges to run ajax_login() in AJAX
+    add_action( 'wp_ajax_nopriv_ajaxlogin', 'ajax_login' );
+}
+
+// Execute the action only if the user isn't logged in
+if (!is_user_logged_in()) {
+    add_action('init', 'ajax_login_init');
+}
+
+
+
+function ajax_login(){
+
+    // First check the nonce, if it fails the function will break
+    check_ajax_referer( 'ajax-login-nonce', 'security' );
+
+    // Nonce is checked, get the POST data and sign user on
+    $info = array();
+    $info['user_login'] = $_POST['username'];
+    $info['user_password'] = $_POST['password'];
+    $info['remember'] = true;
+
+    $user_signon = wp_signon( $info, false );
+    if ( is_wp_error($user_signon) ){
+        echo json_encode(array('loggedin'=>false, 'message'=>__('Wrong username or password.')));
+    } else {
+        echo json_encode(array('loggedin'=>true, 'message'=>__('Login successful, redirecting...')));
+    }
+
+    die();
+}
+
+
+
+
+
+
+//Limiting access to Wordpress's backend for users that aren't admins, this is where Alex found it: http://premium.wpmudev.org/blog/limit-access-to-your-wordpress-dashboard/
+add_action( 'init', 'blockusers_init' );
+function blockusers_init() {
+	//hide admin bar from users that aren't admins
+	if (!current_user_can('administrator') && !is_admin()) {
+  		show_admin_bar(false);
+	}
+	
+	//if non-admin user tries to access dashboard, this redirects them to the homepage
+	if ( is_admin() && ! current_user_can( 'administrator' ) &&
+	! ( defined( 'DOING_AJAX' ) && DOING_AJAX ) ) {
+	wp_redirect( home_url() );
+	exit;
+	}
+}
 
 
 
@@ -86,6 +151,23 @@ add_action( 'wp_enqueue_scripts', 'migration_scripts_styles' );
 
 
 
+
+
+
+add_theme_support( 'post-thumbnails' );
+
+
+
+
+
+
+
+
+
+
+//=========================== BEGIN WALKER NAV FOR CUSTOM NAV CLASSES ==========================================//
+//walker nav is used to add custom classes to our nav items. this simplifies CSS styling on the nav elements
+//that we modify
 class Project_C_Standard_Menu extends Walker_Nav_Menu {
   function start_el ( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
     $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
@@ -181,6 +263,78 @@ class Project_C_Standard_Menu extends Walker_Nav_Menu {
     $output .= "</li>\n";
   }
 }
+//=================================================================================================================//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//=========================== BEGIN CUSTOM POST TYPES ==========================================//
+
+//CUSTOM POST TYPE: Organization Page ==========================
+
+add_image_size( 'featured-thumb', 1000, 667, true );
+
+add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
+add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
+
+function remove_width_attribute( $html ) {
+   $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
+   return $html;
+}
+
+function filter_ptags_on_images($content) {
+  return preg_replace('/<p[^>]*>\\s*?(<a .*?><img.*?><\\/a>|<img.*?>)?\\s*<\/p>/', '<div class="image-holder">$1</div>', $content);
+}
+add_filter('the_content', 'filter_ptags_on_images');
+
+function organization_post_type() {
+	$labels = array(
+		'name'               => _x( 'Organizations', 'post type general name' ),
+		'singular_name'      => _x( 'Organization', 'post type singular name' ),
+		'add_new'            => _x( 'Add New', 'book' ),
+		'add_new_item'       => __( 'Add New Organization' ),
+		'edit_item'          => __( 'Edit Organization' ),
+		'new_item'           => __( 'New Organization' ),
+		'all_items'          => __( 'All Organization' ),
+		'view_item'          => __( 'View Organization' ),
+		'search_items'       => __( 'Search Organizations' ),
+		'not_found'          => __( 'No organizations found' ),
+		'not_found_in_trash' => __( 'No organizations found in the Trash' ), 
+		'parent_item_colon'  => '',
+		'menu_name'          => 'Organizations'
+	);
+	$args = array(
+		'labels'        => $labels,
+		'description'   => 'All of my organizations',
+		'public'        => true,
+		'menu_position' => 5,
+		'supports'      => array( 'title', 'editor', 'thumbnail'),
+		'has_archive'   => true,
+	);
+	register_post_type( 'organization', $args );	
+}
+add_action( 'init', 'organization_post_type' );
+//==============================================================
+
+
+
+
+
+
+
+
+
 
 
 

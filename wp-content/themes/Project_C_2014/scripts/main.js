@@ -15,7 +15,7 @@ $(function(){ //shorthand document ready
 
 */
 
-
+		
 		//Begin function for changing blogPreviewTitle h1 to blogItemsTitle h2
 		var blogItemsTitles = $('.blogItemsTitle');
 
@@ -28,6 +28,37 @@ $(function(){ //shorthand document ready
 
 		blogItemsTitles.on('click', function() {
 			$('#blogPreviewTitle').html('Can this be anything other than a string?') ;
+		});
+		
+		
+		
+		//Function to show or hide mobile menu////////////////////////////////////////////////////////
+		var mobileNav = $('nav.mobile');
+		var mainHeight = $('nav.mainNav').outerHeight();
+		var mobileHeight = $('div.mobileHeight').outerHeight();
+		var openFlag = 0;
+		
+		$('.menuLink').click( function(){
+		
+			if(openFlag == 0){
+				$(this).text('Close Menu');
+				mobileNav.animate({
+			    	height: mobileHeight
+				}, 300, function() {
+			    	// Animation complete.
+				});		
+				openFlag = 1;
+			} else if (openFlag == 1){
+				$(this).text('Menu');
+				mobileNav.animate({
+			    	height: 0
+				}, 300, function() {
+			    	// Animation complete.
+				});	
+				openFlag = 0;
+			}
+			
+			
 		});
 
 });
