@@ -9,7 +9,7 @@ Author URI: http://alxmrtnz.com
 /* Styles go below */
 
 
-/*====================================== BEGIN RESET STYLES ====================================*/
+
 
 /** * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/) * http://cssreset.com */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -42,138 +42,9 @@ table {
   border-spacing: 0; }
 
 
-/*====================================== END RESET STYLES ====================================*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*====================================== BEGIN UNIVERSAL STYLES ====================================*/
-body {
-  color: #444444;
-  background: #fafafa;
-  /* DEFAULT BUTTON STYLES */ }
-  body div.contentWrapper {
-    max-width: 1000px;
-    margin: 0 auto; }
-  body h1 {
-    font-family: 'Noto Sans', Arial, sans-serif;
-    font-size: 40px;
-    font-weight: 700; }
-  body h2 {
-    font-family: 'Noto Sans', Arial, sans-serif;
-    font-size: 20px;
-    font-weight: 700; }
-  body h3 {
-    font-family: 'Noto Sans', Arial, sans-serif;
-    font-size: 15px;
-    font-weight: 700; }
-  body p {
-    font-family: 'Merriweather', Georgia, serif;
-    font-size: 20px;
-    line-height: 34px;
-    margin-bottom: 30px; }
-
-
-
-    body div.button {
-    background: #529eab;
-    color: white;
-
-    display: inline-block;
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-size: 14px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-    border-radius: 5px;
-    overflow: hidden;
-    padding: 15px 25px;
-    text-decoration: none; }
-    body div.button:hover {
-      background: #63a8b4; }
-
-
-    body div.button.fb {
-      background: #355996; }
-      body div.button.fb:hover {
-        background: #3c64a9; }
-    body div.button.twitter {
-      background: #00a8de; }
-      body div.button.twitter:hover {
-        background: #00bbf8; }
-
-     body div.button i{
-         float: left;
-     }
-
-    body div.button.fb, body div.button.twitter{
-        width:auto !important;
-        padding: 0px;
-
-    }
-     body div.button.fb a, body div.button.twitter a{
-         padding: 15px 13px !important;
-         display: block;
-         color: #fff;
-         text-decoration: none;
-         width: 74px;
-     }
-    asdfasdfasdfsdfsdfasdf
-
-/*====================================== END UNIVERSAL STYLES ====================================*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*==================== BEGIN NAVIGATION STYLES =====================*/
-.navWrapper{
-
-    overflow: hidden;
-}
-@media screen and (min-width: 700px){
-    .navWrapper{
-
-    }
-}
-
-
-nav.mainNav, nav.mobile {
+nav {
   font-family: 'Montserrat', 'Noto Sans', Arial, sans-serif;
   background: #444444;
   overflow: hidden; }
@@ -193,7 +64,7 @@ nav.mainNav, nav.mobile {
     @media screen and (max-width: 800px) {
       nav a.logo {
         padding: 5px 20px; } }
-  nav.mainNav ul li {
+  nav ul li {
     float: left;
     transition: opacity 0.3s ease; }
     nav ul li.menuLink {
@@ -203,19 +74,6 @@ nav.mainNav, nav.mobile {
           display: block; } }
     nav ul li.right {
       float: right; }
-    nav ul li.menuLink{
-        color: white;
-        text-decoration: none;
-        padding: 28px 22px;
-        font-size: 13px;
-
-        cursor: pointer;
-    }
-    @media screen and (max-width: 800px){
-        nav ul li.menuLink{
-            padding: 24px 16px;
-        }
-    }
     nav ul li a {
       color: white;
       text-decoration: none;
@@ -231,7 +89,7 @@ nav.mainNav, nav.mobile {
       @media screen and (max-width: 800px) {
         nav ul li a {
           padding: 24px 16px; } }
-  nav.mainNav ul.mainNavItems {
+  nav ul.mainNavItems {
     width: 100%; }
     nav ul.mainNavItems:hover li.pageLink {
       filter: alpha(opacity=50);
@@ -239,14 +97,14 @@ nav.mainNav, nav.mobile {
       -moz-opacity: 0.5;
       -khtml-opacity: 0.5;
       opacity: 0.5; }
-    nav.mainNav ul.mainNavItems:hover li.pageLink:hover {
+    nav ul.mainNavItems:hover li.pageLink:hover {
       filter: alpha(opacity=100);
       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
       -moz-opacity: 1;
       -khtml-opacity: 1;
       opacity: 1; }
     @media screen and (max-width: 700px) {
-      nav ul.mainNavItems  {
+      nav ul.mainNavItems li.pageLink {
         display: none; } }
   nav ul.rightNavItems {
     float: right; }
@@ -254,15 +112,6 @@ nav.mainNav, nav.mobile {
       nav ul.rightNavItems li.signIn {
         display: none; } }
 
-  nav.mobile{
-      display: none;
-  }
-  @media screen and (max-width: 700px){
-      nav.mobile{
-          height:0px;
-          display: block;
-      }
-  }
 
 
 
@@ -323,6 +172,59 @@ nav.mainNav, nav.mobile {
 
 
 
+/*====================================== BEGIN UNIVERSAL STYLES ====================================*/
+body {
+  color: #444444;
+  background: #fafafa;
+  /* DEFAULT BUTTON STYLES */ }
+  body div.contentWrapper {
+    max-width: 1000px;
+    margin: 0 auto; }
+  body h1 {
+    font-family: 'Noto Sans', Arial, sans-serif;
+    font-size: 40px;
+    font-weight: 700; }
+  body h2 {
+    font-family: 'Noto Sans', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 700; }
+  body h3 {
+    font-family: 'Noto Sans', Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 700; }
+  body p {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 20px;
+    line-height: 34px;
+    margin-bottom: 30px; }
+  body div.button {
+    background: #529eab;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 14px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 15px 25px;
+    text-decoration: none; }
+    body div.button:hover {
+      background: #63a8b4; }
+    body div.button.fb {
+      background: #355996; }
+      body div.button.fb:hover {
+        background: #3c64a9; }
+    body div.button.twitter {
+      background: #00a8de; }
+      body div.button.twitter:hover {
+        background: #00bbf8; }
+
+/*====================================== END UNIVERSAL STYLES ====================================*/
+
 
 
 
@@ -361,10 +263,25 @@ nav.mainNav, nav.mobile {
       margin: 0 auto;
       position: relative; }
     .mast .videoMast .close {
-      position: absolute;
-      bottom: -23px;
-      cursor: pointer;
-      right: 10px; }
+        height:20px;
+        cursor: pointer;
+        right: 10px;
+        background: #fafafa;
+  }
+    .mast .videoMast .close .exit{
+        width: 85px;
+        margin: 0 auto;
+        color: #fff;
+        font-family: 'Merriweather', Georgia, serif;
+        background: #d33d45;
+        padding: 5px 25px;
+        -webkit-border-bottom-right-radius: 5px;
+        -webkit-border-bottom-left-radius: 5px;
+        -moz-border-radius-bottomright: 5px;
+        -moz-border-radius-bottomleft: 5px;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
   .mast .bg {
     position: absolute;
     top: 0;
@@ -386,13 +303,18 @@ nav.mainNav, nav.mobile {
     width: 100px;
     height: 100px;
     position: relative;
-    margin: 180px auto 0px auto;
+    margin: 185px auto 0px auto;
     z-index: 3;
     background-image: url(images/playIconFallback.png);
     background-repeat: no-repeat;
     background-image: url(images/playIcon.svg), none;
     background-size: 100% auto;
     cursor: pointer; }
+    @media screen and (max-width: 800px){
+        .mast .playBtn{
+            margin-top: 115px;
+        }
+    }
     .mast .playBtn:hover {
       filter: alpha(opacity=50);
       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
@@ -460,17 +382,13 @@ nav.mainNav, nav.mobile {
         padding: 0px 0px 0px 30px;
         position: relative;
         width: 94%; } }
-
-    .defaultButton{width: 50px;}
     .orgContentWrapper div.leftColumn div.button {
-
+      width: 50px;
       text-align: center;
       margin-left: 33px; }
       @media screen and (max-width: 880px) {
         .orgContentWrapper div.leftColumn div.button {
           margin-left: 0px; } }
-
-
     @media screen and (max-width: 880px) {
       .orgContentWrapper div.leftColumn div.voting {
         float: left;
@@ -531,46 +449,13 @@ nav.mainNav, nav.mobile {
         padding: 30px 4%;
         width: 92% !important;
         max-width: 92%; } }
-    .orgContentWrapper .mainContent .breadCrumbs {
+    .orgContentWrapper .mainContent div.breadCrumbs {
       font-family: 'Noto Sans', Arial, sans-serif;
       font-size: 14px;
-
+      color: #cbcbcb;
       border-bottom: 1px solid #ececec;
       padding-bottom: 15px;
       margin-bottom: 25px; }
-
-    .orgContentWrapper .mainContent .breadCrumbs span {
-          color: #cbcbcb;
-    }
-
-    .orgContentWrapper .mainContent .breadCrumbs a{
-        text-decoration: none;
-        color: #ddd;
-    }
-    .orgContentWrapper .mainContent .breadCrumbs a:hover{
-        color: #555;
-    }
-
-  .story div.image-holder {
-      width:100%;
-  }
-  .story div.image-holder img{
-      width: 100%;
-  }
-
-
-
-  div.caption{
-
-  }
-
-  div.caption p {
-    font-family: 'Merriweather', Georgia, serif;
-    font-size: 14px;
-    line-height: 20px;
-    font-style: italic;
-    color: #aaa;
-    margin-bottom: 30px; }
 
 /*====================================== END ORG PAGE STYLES ====================================*/
 

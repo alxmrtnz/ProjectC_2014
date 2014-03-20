@@ -1,0 +1,196 @@
+/*
+Theme Name: Project C 2014
+Theme URI: [GitHub Link]
+Description: A theme created by Ohio University Interactive Multimedia capstone class for the 2014 edition of Project C
+Version: 1.0
+Author: Alex Martinez, Lindsay Cherry, Chris Kennedy, Sabrina Reda, Connor Sibrik
+Author URI: http://alxmrtnz.com
+*/
+
+/* Styles go below */
+
+
+
+/* COLORS */
+$main-teal: #529eab;
+
+
+$main-black: #444444;
+$main-grey: #111111;
+$main-red: #d33d45;
+$main-yellow: #e2cd34;
+$main-green: #72b574;
+$main-tan: #fafafa;
+
+$fb-blue: #355996;
+$twitter-blue: #00a8de;
+
+
+/* VARIABLES */
+$orgContentBreak-1: 880px;
+$break-1: 800px;
+$break-2: 700px;
+/* MIXINS */
+
+
+
+
+//BORDER RADIUS MIXIN
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin hover-bg($color){
+    background: lighten($color, 5%)
+}
+
+// OPACITY MIXIN
+@mixin opacity($trans) {
+  filter: alpha(opacity=($trans * 100));
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$trans * 100})";
+  -moz-opacity: $trans;
+  -khtml-opacity: $trans;
+  opacity: $trans;
+}
+
+/* IMPORTS */
+
+@import 'organization';
+@import 'reset';
+@import 'nav';
+
+@import 'homepage';
+
+
+
+
+
+
+
+
+/*==================== BEGIN UNIVERSAL STYLES =====================*/
+
+body{
+
+    color: $main-black;
+    background: $main-tan;
+
+    div.contentWrapper{
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    h1{
+        font-family: 'Noto Sans', Arial, sans-serif;
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+	h2{
+		font-family: 'Noto Sans', Arial, sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+	}
+
+	h3 {
+		font-family: 'Noto Sans', Arial, sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+	}
+
+    p{
+        font-family: 'Merriweather', Georgia, serif;
+        font-size: 20px;
+        line-height: 34px;
+        margin-bottom: 30px;
+    }
+
+    /* DEFAULT BUTTON STYLES */
+    div.button{
+        background: $main-teal;
+        color: white;
+        cursor: pointer;
+        display: inline-block;
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-size: 14px;
+        @include border-radius(5px);
+        overflow: hidden;
+        padding:15px 25px;
+        text-decoration: none;
+
+        &:hover{
+            @include hover-bg($main-teal);
+        }
+        &.fb{
+            background: $fb-blue;
+            &:hover{
+                @include hover-bg($fb-blue);
+            }
+        }
+        &.twitter{
+            background: $twitter-blue;
+            &:hover{
+                @include hover-bg($twitter-blue);
+            }
+        }
+        a{
+
+        }// END div.button a
+    }// END div.button
+}// END body
+/////////////////////* END UNIVERSAL STYLES */////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+/*==================== BEGIN FOOTER STYLES =====================*/
+
+html, body{
+    height: 100%;
+}
+
+.wrapper{
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -100px;
+}
+
+footer, .push{
+    height: 100px;
+}
+
+footer {
+	background-color: $main-grey;
+	p {
+		color: #fff;
+	}
+
+}
+/////////////////////* END FOOTER STYLES */////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
