@@ -138,6 +138,10 @@ body {
 	     text-decoration: none;
 	     width: 74px;
      }
+	 
+	 img {
+		 max-width: 100%;
+	 }
 
 
 /*====================================== END UNIVERSAL STYLES ====================================*/
@@ -463,6 +467,11 @@ nav.mainNav, nav.mobile {
 
 
 /*====================================== BEGIN INDEX STYLES ====================================*/
+.index {
+	text-align: center;
+}
+
+
 #intro {
   text-align: center;
   margin: 40px 10px auto 10px; }

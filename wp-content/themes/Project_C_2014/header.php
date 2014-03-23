@@ -53,6 +53,9 @@
 	<!-- form for ajax login, found here: natko.com/wordpress-ajax-login-without-a-plugin-the-right-way/-->
 	<!-- check this for possible confirmation emails to new accounts: http://wordpress.org/support/topic/stop-spam-confirmation-emails-to-all-new-registrations maybe this too: http://wordpress.org/plugins/pie-register/ and maybe this: http://wordpress.org/plugins/dm-confirm-email/screenshots/ -->
 	<form id="login" action="login" method="post" class="loginForm">
+		
+		<?php wp_register(); ?>
+		
         <h1>Site Login</h1>
         <p class="status"></p>
         <label for="username">Username</label>

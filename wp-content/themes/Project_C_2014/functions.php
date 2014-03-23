@@ -24,40 +24,6 @@
  * @uses set_post_thumbnail_size() To set a custom post thumbnail size.
  *
  */
-function migration_setup() {
-
-	// This theme styles the visual editor with editor-style.css to give it some niceties.
-	add_editor_style();
-
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menu( 'primary', __( 'Primary Menu', 'migration' ) );
-
-	// This theme uses a custom image size for featured images, displayed on "standard" posts.
-	add_theme_support( 'post-thumbnails' );
-	
-}
-add_action( 'after_setup_theme', 'migration_setup' );
-
-
-/**
- * Enqueues scripts and styles for front-end.
- */
-function migration_scripts_styles() {
-	global $wp_styles;
-
-	/*
-	 * Loads our main stylesheet.
-	 */
-	wp_enqueue_style( 'migration-style', get_stylesheet_uri() );
-
-	/*
-	 * Optional: Loads the Internet Explorer specific stylesheet.
-	 */
-	//wp_enqueue_style( 'migration-ie', get_template_directory_uri() . '/css/ie.css', array( 'migration-style' ), '20121010' );
-	//$wp_styles->add_data( 'migration-ie', 'conditional', 'lt IE 9' );
-}
-add_action( 'wp_enqueue_scripts', 'migration_scripts_styles' );
-
 
 
 
@@ -325,6 +291,13 @@ function organization_post_type() {
 	register_post_type( 'organization', $args );	
 }
 add_action( 'init', 'organization_post_type' );
+//==============================================================
+
+
+
+
+
+
 //==============================================================
 
 

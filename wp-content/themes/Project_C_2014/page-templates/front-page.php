@@ -8,12 +8,34 @@
 
 get_header(); ?>
 
-	
-	<?php while ( have_posts() ) : the_post(); ?>
-	
-		<?php get_template_part( 'content', 'page' ); ?>
+<div class="index">
 
-	<?php endwhile; // end of the loop. ?>
+<?php while ( have_posts() ) : the_post(); ?>
+	
+		<?php get_template_part( 'content' ); ?>
+		
+        <section id="2014index_orgs">
+        
+        		<img src="<?php the_field('featured_organization'); ?>" alt="Featured Organization" />
+        
+                <?php the_field('organization_description'); ?>
+                
+        </section>
+
+        
+        
+	<?php endwhile; ?>
+
+
+
+
+
+ 	
+
+	
+	
+    
+</div>
 
 	
 <?php get_footer(); ?>
