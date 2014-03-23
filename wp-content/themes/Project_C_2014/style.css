@@ -138,9 +138,206 @@ body {
 	     text-decoration: none;
 	     width: 74px;
      }
-    
+	 
+	 img {
+		 max-width: 100%;
+	 }
+
 
 /*====================================== END UNIVERSAL STYLES ====================================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*position: fixed;
+z-index: 1000;
+background: #eee;
+width: 375px;
+height: 400px;
+
+left: 50%;
+top: 50%;
+margin-top: -200px;
+margin-left: -150px;
+
+
+
+*/
+
+
+form#login {
+    display: none;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 200px;
+    padding: 40px 25px 25px 25px;
+    width: 350px;
+    z-index: 999;
+    left: 50%;
+    margin-left: -200px;
+    color: #878787;
+    font-size: 11px;
+}
+
+form#login h1{
+    color: #333333;
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    font-size: 27px;
+    font-weight: 100;
+    text-align: center;
+    line-height: 1;
+    margin: 0 0 30px 0;
+}
+
+form#login input#username,
+form#login input#password{
+    border: 1px solid #EDEDED;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1) inset;
+    color: #333333;
+    font-size: 15px;
+    padding: 10px 10px 10px 13px;
+    width: 325px;
+    margin: 7px 0 30px 0;
+    background-color: #F9F9F9;
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+}
+
+form#login input#username:focus,
+form#login input#password:focus{
+    background-color: #FFF;
+}
+
+
+form#login input.submit_button{
+    font-size: 13px;
+    color: #FFF;
+    border: 1px solid #b34336;
+    background-color: #e25c4c;
+    border-radius: 3px;
+    text-shadow: 0 1px 0 #ba3f31;
+    padding: 9px 31px 9px 31px;
+    background: -moz-linear-gradient(top, #ea6656, #df5949);
+    border-top: 1px solid #bb483a;
+    border-bottom: 1px solid #a63b2e;
+    float: right;
+    box-shadow: 0 1px 0 #E87A6E inset;
+}
+
+form#login a{
+    text-decoration: none;
+}
+
+form#login a.close{
+    color: #DCDCDC;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+form#login a.lost{
+    color: #B4B2B2;
+    float: left;
+    margin: 10px 0 0 0;
+}
+
+form#login p.status{
+    text-align: center;
+    margin: -25px 0 20px 0;
+    display: none;
+}
+
+
+.login_overlay{
+    height: 100%;
+    width: 100%;
+    background-color: #F6F6F6;
+    opacity: 0.9;
+    position: fixed;
+    z-index: 998;
+}
+
+
+
+a.login_button img{
+	float: left;
+	margin-top: -4px;
+	margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -175,7 +372,7 @@ body {
 
 nav.mainNav, nav.mobile {
   font-family: 'Montserrat', 'Noto Sans', Arial, sans-serif;
-  background: #444444;
+  background: #444444; /* #323b44?*/
   overflow: hidden; }
   nav a.logo {
     float: left;
@@ -270,6 +467,11 @@ nav.mainNav, nav.mobile {
 
 
 /*====================================== BEGIN INDEX STYLES ====================================*/
+.index {
+	text-align: center;
+}
+
+
 #intro {
   text-align: center;
   margin: 40px 10px auto 10px; }
@@ -425,6 +627,7 @@ nav.mainNav, nav.mobile {
       margin: 0 auto;
       max-width: 1000px;
       padding-bottom: 20px;
+      padding-top: 20px;
       text-shadow: 0px 2px 7px #000; }
       @media screen and (max-width: 880px) {
         .mast div.copy div.copyWrapper {
@@ -492,6 +695,7 @@ nav.mainNav, nav.mobile {
     .orgContentWrapper div.leftColumn div.sharing {
       border-bottom: 1px solid #ececec;
       border-top: 1px solid #ececec;
+
       margin: 30px 0px;
       padding: 10px 0px; }
       @media screen and (max-width: 880px) {
@@ -523,6 +727,19 @@ nav.mainNav, nav.mobile {
     padding: 30px 110px 20px 40px;
     margin-left: 169px;
     /* END .story - this is to hide most of the written word*/ }
+    
+    .orgContentWrapper .mainContent#infographic {
+    	margin-top:30px;
+    }
+    
+    
+    .orgContentWrapper .mainContent#infographic img{
+	    width:100%;
+    }
+    
+    
+    
+    
     @media screen and (max-width: 880px) {
       .orgContentWrapper .mainContent {
         background: #fff;
@@ -564,13 +781,13 @@ nav.mainNav, nav.mobile {
 	  
   }
   
-  div.caption p {
+  div.caption {
     font-family: 'Merriweather', Georgia, serif;
     font-size: 14px;
     line-height: 20px;
     font-style: italic;
     color: #aaa;
-    margin-bottom: 30px; }
+    margin-bottom: 25px; }
 
 /*====================================== END ORG PAGE STYLES ====================================*/
 

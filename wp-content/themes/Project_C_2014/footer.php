@@ -15,6 +15,7 @@
 	 <script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
     <script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/scripts/organization.js"></script>
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/scripts/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/ajax-login-script.js"></script>
 <?php wp_footer(); ?>
 
 </body>
