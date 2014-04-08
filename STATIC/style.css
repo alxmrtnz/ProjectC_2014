@@ -240,7 +240,7 @@ body {
 
 
 
-/*====================================== BEGIN ORG PAGE STYLES ====================================*/
+/*====================================== BEGIN Donor PAGE STYLES ====================================*/
 .sidedock {
   top: 30px !important; }
 
@@ -299,17 +299,7 @@ body {
     margin-top: 0px;
     min-width: 50%;
     min-height: 50%; }
-  .mast .playBtn {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    margin: 185px auto 0px auto;
-    z-index: 3;
-    background-image: url(images/playIconFallback.png);
-    background-repeat: no-repeat;
-    background-image: url(images/playIcon.svg), none;
-    background-size: 100% auto;
-    cursor: pointer; }
+  
     @media screen and (max-width: 800px){
         .mast .playBtn{
             margin-top: 115px;
@@ -357,10 +347,11 @@ body {
         font-size: 18px;
         margin-bottom: 0px; }
       .mast div.copy div.copyWrapper h1, .mast div.copy div.copyWrapper p.subtitle {
-        padding-left: 210px; }
+        text-align: center;
+        padding-bottom: 10px; }
         @media screen and (max-width: 880px) {
           .mast div.copy div.copyWrapper h1, .mast div.copy div.copyWrapper p.subtitle {
-            padding: 0px; } }
+            padding: 10px; } }
 
 .orgContentWrapper {
   max-width: 1000px;
@@ -372,13 +363,12 @@ body {
     position: relative; }
   .orgContentWrapper div.leftColumn {
     font-family: 'Noto Sans', Arial, sans-serif;
-    height: 400px;
+    height: 0px;
     position: absolute;
     top: 0px;
-    width: 170px; }
+    width: 0px; }
     @media screen and (max-width: 880px) {
       .orgContentWrapper div.leftColumn {
-        height: 75px;
         padding: 0px 0px 0px 30px;
         position: relative;
         width: 94%; } }
@@ -437,9 +427,9 @@ body {
   .orgContentWrapper .mainContent {
     background: #fff;
     border: 1px solid #ececec;
-    max-width: 700px;
+    max-width: 900px;
     padding: 30px 110px 20px 40px;
-    margin-left: 169px;
+    margin-left: 0px;
     /* END .story - this is to hide most of the written word*/ }
     @media screen and (max-width: 880px) {
       .orgContentWrapper .mainContent {
@@ -457,7 +447,105 @@ body {
       padding-bottom: 15px;
       margin-bottom: 25px; }
 
-/*====================================== END ORG PAGE STYLES ====================================*/
+
+
+/*===== Grid ====*/
+
+.donor_level {
+		
+}
+
+#row_1s{
+	float: left;
+	width: 30%
+
+}
+
+
+#row_2s{
+	float: left;
+	width: 30%
+}
+
+#row_3s{
+	float: left;
+	width: 30%
+}
+
+
+ul#grid {
+   padding: 0 50px 0 50px;
+  }
+
+#grid li {
+  float: left;
+  padding: 0;
+  margin: 0 5px 10px 5px;
+  } 
+
+#grid li a {
+  display: block;
+  }
+  
+#grid li img {
+  background-color: white;
+  padding: 3px;
+  margin: 2%;
+  border: 1px solid #58595b;
+  width: 217px;
+  height: 93px;
+  
+  }
+  
+#grid li a:hover img {
+  opacity:0.3;
+  filter:alpha(opacity=30);
+}
+
+
+
+
+
+
+/*---- Friends Grid ---*/
+
+
+
+#row_1f{
+	float: left;
+}
+
+
+#row_2f{
+	float: left;
+}
+
+#row_3f{
+	float: left;
+}
+
+
+ul.text_grid {
+   padding: 0 50px 0 50px;
+  }
+
+.text_grid li {
+  float: left;
+  padding: 2%;
+  margin: 0 5px 10px 5px;
+  text-align: center;
+  } 
+
+.text_grid li a {
+  display: block;
+  }
+  
+
+
+
+
+
+/*====================================== END donor PAGE STYLES ====================================*/
 
 
 
